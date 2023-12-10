@@ -1,0 +1,13 @@
+.taskbar {
+    border: 2px solid ;
+    border-color: black;
+    width: 99vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav {
+    float: center;
+    margin: 20px;
+}
