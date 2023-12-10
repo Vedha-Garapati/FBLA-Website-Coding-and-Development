@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="taskbar">
+        <div class="nav" id="home">
+            <button>
+                <a href="index.html">
+                    <h2>Home</h2>
+                </a>
+            </button>
+            
+        </div>
+        
+        <div class="nav" id="appt">
+            <button>
+                <a href="Appt.html">
+                    <h2>Book an Appointment</h2>
+                </a>
+            </button>
+            
+            
+        </div>
+        <div class="nav" id="cont">
+            <button>
+                <a href="Contact.html">
+                    <h2>Contact Us</h2>
+                </a>
+            </button>
+            
+        </div>
+        <div class="nav" id="apply">
+            <button>
+                <a href="Apply.html">
+                    <h2>Apply Here</h2>
+                </a>
+            </button>
+            
+        </div>
+        <div class="nav" id="rev">
+            <h2>Reviews</h2>
+        </div>
+    </div>
+    <div id="title">
+        <h1>Simply Taxify</h1>
+    </div>
+    <form action="index.php" method="POST" encryption="multipart/form-data">
+        <label for="Username">Full name:</label>
+        <input type="text" id="username" placeholder="Spongebob" minlength="6" maxlength="30" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="SSquarepants@gmail.com"><br>
+
+        <label for="phone">Phone #:</label>
+        <input type="tel" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+
+    </form>
+</body>
+</html>
