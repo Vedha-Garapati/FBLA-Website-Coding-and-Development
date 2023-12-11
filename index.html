@@ -4,65 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simply Taxify</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
-<body>
-    <div class="taskbar">
-        <div class="nav" id="home">
-            <button>
-                <a href="index.html">
-                    <h2>Home</h2>
-                </a>
+<body class="bg-dark text-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Simply Taxify</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Appt.html">Book an Appointment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Apply.html">Apply Here</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reviews</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        
-        <div class="nav" id="appt">
-            <button>
-                <a href="Appt.html">
-                    <h2>Book an Appointment</h2>
-                </a>
-            </button>
-            
-            
+    </nav>
+
+    <div class="container mt-5">
+        <div id="title" class="text-center mb-4">
+            <h1 class="display-1">Simply Taxify</h1>
         </div>
-        <div class="nav" id="cont">
-            <button>
-                <a href="Contact.html">
-                    <h2>Contact Us</h2>
-                </a>
-            </button>
-            
+
+        <div class="text-center mb-5">
+            <h2 class="display-6">Individual and Business Tax Services</h2>
         </div>
-        <div class="nav" id="apply">
-            <button>
-                <a href="Apply.html">
-                    <h2>Apply Here</h2>
-                </a>
-            </button>
-            
-        </div>
-        <div class="nav" id="rev">
-            <h2>Reviews</h2>
+
+        <h3 class="mb-4">Tax Services</h3>
+
+        <div class="mb-4">
+            <div class="p-2 bg-secondary rounded mb-3">
+                <h6 class="lead">Virtual Tax Preparation</h6>
+                <p>Go virtual with our virtual tax prep service. You'll work with a tax pro remotely from any device you want.</p>
+            </div>
+
+            <div class="p-2 bg-secondary rounded mb-3">
+                <h6 class="lead">Face-to-Face With a Tax Expert</h6>
+                <p>Schedule an appointment using SMS / Text to (309) 205-2282. Sit safely across from your tax professional and enjoy in-person care and a relationship that you can rely on every year.</p>
+            </div>
+
+            <div class="p-2 bg-secondary rounded mb-3">
+                <h6 class="lead">Drop Off Your Tax Docs</h6>
+                <p>Bring everything to meet with your tax pro. We’ll handle the rest until it’s time for you to review and approve your return.</p>
+            </div>
         </div>
     </div>
-    <div id="title">
-        <h1>Simply Taxify</h1>
-    </div>
-    <div>
-        <h1>The Service You Can Trust</h1>
-        <h2>Individual and Business Tax Services</h2>
-    </div>
-    <div>
-        <h2>Tax Services</h2>
-        <p>Virtual tax preparation is a great way to complete your taxes.</p>
-        <p>Go virtual with our virtual tax prep service. You'll work with a tax pro remotely from any device you want</p>
-        <br>
-        <p>Face-to-Face with a tax expert.</p>
-        <p>Schedule an appointment using SMS / Text to (309) 205-2282. Sit safely across from your tax professional and enjoy in-person care and a relationship that you can rely on every year.</p>
-        <br>
-        <p>Drop-off your tax docs to your tax pro.</p>
-        <p>Bring everything to meet with your tax pro and we’ll handle the rest until it’s time for you to review and approve your return. </p>
-    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
