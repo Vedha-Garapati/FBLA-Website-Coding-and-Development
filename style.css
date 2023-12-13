@@ -1,19 +1,17 @@
-.taskbar {
-    border: 2px solid ;
-    border-color: black;
-    width: 99vw;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav {
-    float: center;
-    margin: 20px;
-}
-
+/*Style for hover effect for divs */
 .bg-secondary:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
+}
+
+
+
+/*Style for fade in effect when page loaded*/
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
 }
