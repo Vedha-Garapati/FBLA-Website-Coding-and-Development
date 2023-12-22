@@ -1,15 +1,13 @@
-/*Style for hover effect for divs */
+/* Hover effect for divs */
 .bg-secondary:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
 
-
-
-/*Style for fade in effect when page loaded*/
+/* Fade in effect when page loaded */
 body {
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
 }
 
 body.loaded {
