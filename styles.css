@@ -120,3 +120,18 @@ section img#mountains_back
     font-size: 1em;
     color: #000000;
 }
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+#taxServicesCarousel .carousel-caption,
+#taxServicesCarousel .carousel-caption p {
+    color: #000000;
+}
+
+
