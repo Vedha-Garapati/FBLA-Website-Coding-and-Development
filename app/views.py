@@ -37,6 +37,7 @@ def index(request):
         apply.problemSolving=problemSolving
         apply.professionalDevelopment=professionalDevelopment
         apply.save()
-        return HttpResponse("<h1>Thank You For Applying</h1>")
+        return render(request, 'thank_you.html')
+
 
     return render(request, 'index.html')
