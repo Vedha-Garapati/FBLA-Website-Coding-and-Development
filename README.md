@@ -15,3 +15,8 @@ In order to launch the website with the django server...
      To test, go back to the website through the link given at the top of the admin page
      Fill out a test application
      Go back to the admin page and see if the information is there(The full name of the applicant should be the subject of the application after clicking apply)
+
+
+Copy this meeting link for practices
+
+https://meet.google.com/xwx-nsai-jax
