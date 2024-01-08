@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Apply
+from .models import Application
 from app.functions import handle_uploaded_file  
 # Create your views here.
 def index(request):
     if request.method=="POST":
-        apply = Apply()
+        apply = Application()
         name=request.POST.get('name')
         email=request.POST.get('email')
         address=request.POST.get('address')
@@ -16,11 +16,7 @@ def index(request):
         availability=request.POST.get('availability')
         phone=request.POST.get('phone')
         years=request.POST.get('years')
-        clientInteraction=request.POST.get('clientInteraction')
-        legislationKnowledge=request.POST.get('legislationKnowledge')
-        teamwork=request.POST.get('teamwork')
-        problemSolving=request.POST.get('problemSolving')
-        professionalDevelopment=request.POST.get('professionalDevelopment')
+        workExperience=request.POST.get('workExperience')
         apply.name=name
         apply.email=email
         apply.address=address
@@ -31,11 +27,7 @@ def index(request):
         apply.availability=availability
         apply.phone=phone
         apply.years=years
-        apply.clientInteraction=clientInteraction
-        apply.legislationKnowledge=legislationKnowledge
-        apply.teamwork=teamwork
-        apply.problemSolving=problemSolving
-        apply.professionalDevelopment=professionalDevelopment
+        apply.workExperience=workExperience
         apply.save()
         return render(request, 'thank_you.html')
 
