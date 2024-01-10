@@ -104,21 +104,24 @@ section img#mountains_back
     z-index: 9;
     right: 450px;
 }
-.sec{
+#sec{
     position: relative;
     padding: 100px;
-    background: #ffffff;
+    background:#7dca7a;
     z-index: 100;
     pointer-events: none;
 }
 .sec h2{
-    font-size: 3.5em;
+    font-size: 5.5em;
     margin-bottom: 10px;
     color: #000000;
 }
 .sec p{
     font-size: 1em;
     color: #000000;
+}
+.containter{
+    background-color:linear-gradient(#17e76e,#7597de);
 }
 body {
     opacity: 0;
