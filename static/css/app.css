@@ -136,3 +136,20 @@ body.fade-in {
 #taxServicesCarousel .carousel-caption p {
     color: #000000;
 }
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2b1055;
+    border-radius: 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #fff;
+    color: #2b1055;
+}
