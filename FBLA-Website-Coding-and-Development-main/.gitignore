@@ -1,0 +1,4 @@
+
+*.xml
+*.pyc
+db.sqlite3

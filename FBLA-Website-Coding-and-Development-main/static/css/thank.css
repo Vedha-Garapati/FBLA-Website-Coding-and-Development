@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#17e76e, #7597de);
+    color: #fff;
+}
+
+.thank-you-container {
+    text-align: center;
+    padding: 100px;
+}
+
+.thank-you h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.thank-you p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-go-home {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2b1055;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-go-home:hover {
+    background-color: #fff;
+    color: #2b1055;
+}
