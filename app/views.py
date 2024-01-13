@@ -10,6 +10,8 @@ from .models import Application
 # Create your views here.
 from app.functions import handle_uploaded_file  
 #Primary method is commonly reffered to as the 'index' method and the 'request' parameter refers to where the method will be grabbing data from.
+def main(request):
+    return render(request,'index.html')
 def index(request):
     #Runs a condition asking if the data was written by a user, or 'POST' data, run the following code beneath.
     if request.method=="POST":
