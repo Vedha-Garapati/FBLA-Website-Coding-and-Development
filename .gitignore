@@ -3,3 +3,7 @@
 *.pyc
 db.sqlite3
 *.sqlite3
+*.json
+node_modules/django/README.md
+package.json
+*.json
