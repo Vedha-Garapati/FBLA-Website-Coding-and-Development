@@ -67,7 +67,9 @@ header ul li a.active{
     background-color: #fff;
     color: #2b1055;
 }
-
+#img{
+    opacity: 0.5;
+}
 section{
     position: relative;
     width: 100%;
