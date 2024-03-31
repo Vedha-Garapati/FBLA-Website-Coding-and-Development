@@ -61,7 +61,7 @@ def index(request):
         #Grabs the user input data from the input box that has the name of 'workExperience' on it and stores it in this variable
         workExperience=request.POST.get('workExperience')
 
-        
+        middle=request.POST.get('middle')
 
         
 
@@ -77,7 +77,7 @@ def index(request):
         apply.taxSoftware=taxSoftware
 
         #Stores the variable we initalized earlier in this code segement and stores it in the 'file' section of the Application dataset
-        apply.file=file
+        apply.middle=middle
 
         #Stores the variable we initalized earlier in this code segement and stores it in the 'availability' section of the Application dataset
         apply.availability=availability
@@ -106,3 +106,6 @@ def application(request):
 
 def applyHere(request):
     return render(request, 'work.html')
+
+def AI(request):
+    return render(request, 'AI.html')

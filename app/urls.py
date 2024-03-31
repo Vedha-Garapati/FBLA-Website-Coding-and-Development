@@ -4,6 +4,7 @@ urlpatterns = [
     path('', views.main,name = 'index'),
     path('work',views.application, name='work' ),
     path('apply', views.applyHere, name='apply'),
-    path('thank',views.index,name='thank')
+    path('thank',views.index,name='thank'),
+    path('ai',views.AI,name="ai")
 
 ]

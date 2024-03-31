@@ -13,7 +13,7 @@ class Application(models.Model):
 
     certify=models.CharField(max_length=200,null=True,blank=True)#Initializes data variable for the applicants certifications. Accepts maximum of 200 characters
 
-    file=models.FileField(null=True, blank=True)#Initializes data variable for the applicants resume.
+    middle=models.CharField(max_length=1,null=True,blank=True)
 
     taxSoftware=models.CharField(max_length=200,null=True,blank=True)#Initializes data variable for the applicants tax software experience. Accepts maximum of 200 characters
 
