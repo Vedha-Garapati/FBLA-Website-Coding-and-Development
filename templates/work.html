@@ -2,9 +2,12 @@
 
 <html lang="en">
 <head>
+    <!--Set up page and import all stylesheet dependecies -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Simply Taxify</title>
+
     <link rel="icon" href="static/img/logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -14,6 +17,7 @@
 </head>
 
 <body>
+    <!--Header-->
     <header>
         <a href="/" class="logo">Simply Taxify</a>
         <ul>
@@ -29,6 +33,13 @@
     <br>
     <br>
 
+    <!--Chatbot Embed-->
+    <div>
+        <script type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+        <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='clr2gyugf00182g6bm4zixygq' height='700px' width='500px'></zapier-interfaces-chatbot-embed>
+    </div>
+    <!--Application form-->
+    <div>
         <h1 class="p-5 text-center" data-aos="zoom-in">Work With Us</h1>
         <form action="thank" method="POST" class="p-3 rounded col-md-10 mx-auto", enctype="multipart/form-data">
             {% csrf_token %}
@@ -110,6 +121,7 @@
             </div>
         </form>
     </div>
+    <!--Import javascript dependecies-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
@@ -118,7 +130,7 @@
 
     <script src="static/js/index.js"></script>
 </body>
-
+<!--Footer-->
 <footer class="contact bg-light py-5" id="contact">
     <div class="container text-center">
         <h2 class="mb-4">Contact Information</h2>
@@ -144,5 +156,4 @@
         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
     </div>
 </footer>
-
 </html>
