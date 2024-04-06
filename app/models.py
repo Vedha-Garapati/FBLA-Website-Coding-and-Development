@@ -1,16 +1,14 @@
 from django.db import models
 # Create your models here.
 # Application Model: created a class called Application using the models provided by Django to initialize variables for each input field
-
 class Application(models.Model):
     name=models.CharField(max_length=50, null=True, blank=True)#Initializes data variable for the name box, accepting a maximum length of 50 characters
 
     email=models.EmailField(null=True,blank=True)#Initializes data variable for the email box, designed specifically to receive email info
 
-    education=models.CharField(max_length=100, null=True,blank=True)#Initializes data variable for the highest education level input box. Accepts maximum of 100 characters
+    education=models.CharField(max_length=100, null=True,blank=True)#Initializes data variable for the highest education level input box. Accepts maximum of 100 characters   
+    address=models.CharField(max_length=200,null=True,blank=True)
     
-    address=models.CharField(max_length=200,null=True,blank=True)#Initializes data variable for the applicants address. Accepts maximum of 200 characters
-
     certify=models.CharField(max_length=200,null=True,blank=True)#Initializes data variable for the applicants certifications. Accepts maximum of 200 characters
 
     middle=models.CharField(max_length=1,null=True,blank=True)

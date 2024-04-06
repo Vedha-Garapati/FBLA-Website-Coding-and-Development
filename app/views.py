@@ -62,11 +62,6 @@ def index(request):
         workExperience=request.POST.get('workExperience')
 
         middle=request.POST.get('middle')
-
-        
-
-        
-
         #Stores the variable we initalized earlier in this code segement and stores it in the 'education' section of the Application dataset
         apply.education=education
 
