@@ -299,13 +299,16 @@
                 </div>
             </div>
         
-            <!-- Submit Button -->
+            <!-- Submit Button + Book Appointment Button -->
             <div class="row mt-3 py-4">
                 <div class="col-md-12">
                     <button type="submit" class="custom-button ml-3">Submit Application</button>
-                    <a href="https://calendar.app.google/M4wru36nNh1gctCK8">
-                        <button type="button" class="custom-button">Book an Appointment/Interview</button>
-                    </a>
+                    <button type="button" class="custom-button mb-5" data-bs-toggle="collapse" data-bs-target="#calendar">Book an Appointment/Interview</button>
+                    <div id="calendar" class="collapse">
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background-color: white; border: 1px solid #777; border-radius: 15px;">
+                            <iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ04oMH_t5RC-2BhBvK_JehupAAzbHKC5Jhy-edRFoBVPJhV7lbGlETOXphn_aC6SgyCbM2XlqIN" style="border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" scrolling="no"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>
