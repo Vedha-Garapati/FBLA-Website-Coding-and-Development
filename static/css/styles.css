@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -11,13 +11,13 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    background: linear-gradient(#17e76e, #ffffff);
+    background: linear-gradient(#ffffff, #5fe798);
 }
 
 header {
     position: absolute;
     top: 0;
-    Left: 0;
+    left: 0;
     width: 100%;
     padding: 30px 100px;
     display: flex;
@@ -33,7 +33,6 @@ header .logo {
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
-
 }
 
 header ul {
@@ -54,10 +53,87 @@ header ul li a {
     border-radius: 20px;
 }
 
-header ul li a:hover,
-header ul li a.active {
+header ul li a:hover {
     background: #fff;
     color: #2b1055;
+}
+
+section.home {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    /* Adjust the height as needed */
+}
+
+#header-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px);
+}
+
+#text {
+    position: absolute;
+    color: #fff;
+    font-size: 4vw;
+    z-index: 9;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 30ch;
+    animation: typing 100ms steps(100, end);
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 30ch
+    }
+}
+
+/* Google Translate Element */
+#google_translate_element {
+    position: fixed;
+    bottom: 1%;
+    left: 0.5%;
+    z-index: 9999;
+}
+
+.about-img {
+    width: 100%;
+    /* Make the image take up the full width of its container */
+    height: auto;
+    /* Ensure the image maintains its aspect ratio */
+    max-height: 500px;
+    /* Optionally, set a maximum height */
+}
+
+/* Team Section */
+.card {
+    margin-bottom: 30px;
+}
+
+.testimonial-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-weight: bold;
 }
 
 .custom-button {
@@ -73,105 +149,6 @@ header ul li a.active {
 }
 
 .custom-button:hover {
-    background-color: #fff;
+    background-color: #5fe798;
     color: #2b1055;
-}
-
-#img {
-    opacity: 0.5;
-}
-
-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #7dca7a, transparent);
-    z-index: 1000;
-}
-
-section img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120%;
-    object-fit: cover;
-    pointer-events: none;
-}
-
-section img#moon {
-    position: static;
-    margin-top: -200px;
-    width: 50%;
-    height: auto;
-}
-
-section img#mountains_front {
-    z-index: 10;
-    width: auto;
-    height: auto;
-}
-
-section img#mountains_back {
-    z-index: 0;
-    width: auto;
-    height: auto;
-
-}
-
-#text {
-    position: absolute;
-    color: #fff;
-    font-size: 3.5vw;
-    z-index: 9;
-    right: 450px;
-}
-
-#sec {
-    position: relative;
-    padding: 100px;
-    background: #7dca7a;
-    z-index: 100;
-    pointer-events: none;
-}
-
-.sec h2 {
-    font-size: 5.5em;
-    margin-bottom: 10px;
-    color: #000000;
-}
-
-.sec p {
-    font-size: 1em;
-    color: #000000;
-}
-
-.containter {
-    background-color: linear-gradient(#17e76e, #7597de);
-}
-
-body {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-body.fade-in {
-    opacity: 1;
-}
-
-#taxServicesCarousel .carousel-caption,
-#taxServicesCarousel .carousel-caption p {
-    color: #000000;
 }

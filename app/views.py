@@ -104,3 +104,6 @@ def applyHere(request):
 
 def AI(request):
     return render(request, 'AI.html')
+
+def services(request):
+    return render(request, 'services.html')

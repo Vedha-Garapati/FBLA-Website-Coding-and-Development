@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!--Set up page and import all stylesheet dependecies -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Simply Taxify</title>
+
+    <link rel="icon" href="static/img/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="static\css\app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!--Header-->
+    <header>
+      <a href="/" class="logo">Simply Taxify</a>
+      <ul>
+        <li><a href="/" class="active">Home</a></li>
+      <li><a href="services">Services</a></li>
+      <li><a href="work">Careers</a></li>
+      <li><a href="apply">Apply</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="/admin">Admin</a></li>
+      </ul>
+    </header>
+
+    <br />
+    <br />
+    <br />
+
+    <!--Chatbot embed-->
+    <div>
+      <script
+        type="module"
+        src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
+      ></script>
+      <zapier-interfaces-chatbot-embed
+        is-popup="true"
+        chatbot-id="clr2gyugf00182g6bm4zixygq"
+        height="700px"
+        width="500px"
+      ></zapier-interfaces-chatbot-embed>
+    </div>
+
+    <!-- Tax Services Carousel -->
+  <div class="sec" id="sec">
+    <h2 class="mb-5 text-center" data-aos="zoom-in">Tax Services</h2>
+    <div id="taxServicesCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="zoom-out"
+      data-aos-offset="250" data-aos-duration="750">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#taxServicesCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#taxServicesCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#taxServicesCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active text-center">
+          <img src="static/img/virt_tax.jpg" id="img" class="d-block mx-auto rounded" style="width: 50%; height: 50%" />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Virtual Tax Preparation</h3>
+            <p>Go virtual with our virtual tax prep service.</p>
+            <p>You’ll work with a tax pro remotely from any device you want.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item text-center">
+          <img src="static/img/faceto.jpg" class="d-block mx-auto rounded" id="img" style="width: 50%; height: 50%" />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Face-to-Face With A Tax Expert</h3>
+            <p>Sit safely across from your tax professional and enjoy in-person care.</p>
+            <p>Build a relationship that you can rely on every year.</p>
+            <p>Schedule an appointment using SMS / Text to (309) 205-2282.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item text-center">
+          <img src="static/img/dropp.jpg" class="d-block mx-auto rounded" id="img" style="width: 50%; height: 50%" />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Drop-off Your Tax Documents</h3>
+            <p>Bring everything to meet with your tax pro.</p>
+            <p>We'll handle the rest until it's time for you to review and approve your return.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+    <!--Import javascript dependecies-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="static/js/index.js"></script>
+  </body>
+
+  <!--Footer-->
+  <footer class="contact bg-light py-5" id="contact">
+    <div class="container text-center">
+      <h2 class="mb-4">Contact Information</h2>
+      <p class="mb-4">
+        Feel free to reach out to us for any inquiries or assistance.
+      </p>
+
+      <!-- Contact Details -->
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Email</h4>
+          <p>info@simplytaxify.com</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Phone</h4>
+          <p>(309) 205-2282</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Address</h4>
+          <p>123 Main Street, Bloomington IL</p>
+        </div>
+        <img
+          src="static\img\simply-taxify.jpg"
+          class="d-block mx-auto img-rounded"
+          style="width: 25%"
+        />
+      </div>
+      <a href="https://facebook.com" target="_blank"
+        ><i class="fab fa-facebook fa-2x mt-5"></i
+      ></a>
+      <a href="https://instagram.com" target="_blank"
+        ><i class="fab fa-instagram fa-2x"></i
+      ></a>
+    </div>
+  </footer>
+</html>
