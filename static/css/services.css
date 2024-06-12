@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -11,13 +11,7 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    background: linear-gradient(#17e76e, #7597de);
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-body.fade-in {
-    opacity: 1;
+    background: linear-gradient(#ffffff, #5fe798);
 }
 
 header {
@@ -64,19 +58,61 @@ header ul li a:hover {
     color: #2b1055;
 }
 
-section {
-    position: relative;
-    width: 100%;
+section.home {
     height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    overflow: hidden;
+    /* Adjust the height as needed */
 }
 
-#taxServicesCarousel .carousel-caption,
-#taxServicesCarousel .carousel-caption p {
-    color: #000;
+#header-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.60);
+}
+
+#text {
+    position: absolute;
+    color: #fff;
+    font-size: 4vw;
+    z-index: 9;
+    left: 35%; /* Adjust the left position as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 30ch;
+    animation: typing 100ms steps(100, end);
+}
+
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 30ch
+    }
+}
+
+/* Google Translate Element */
+#google_translate_element {
+    position: fixed;
+    bottom: 1%;
+    left: 0.5%;
+    z-index: 9999;
+}
+
+.about-img {
+    width: 100%;
+    /* Make the image take up the full width of its container */
+    height: auto;
+    /* Ensure the image maintains its aspect ratio */
+    max-height: 500px;
+    /* Optionally, set a maximum height */
 }
 
 .custom-button {
@@ -92,16 +128,6 @@ section {
 }
 
 .custom-button:hover {
-    background-color: #fff;
+    background-color: #5fe798;
     color: #2b1055;
-}
-
-.carousel-caption {
-    position: static;
-    text-align: center;
-    padding: 20px;
-}
-
-.carousel-item img {
-    margin-bottom: 20px;
 }
