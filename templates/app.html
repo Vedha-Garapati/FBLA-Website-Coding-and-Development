@@ -1,418 +1,591 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <!--Set up page and import all stylesheet dependecies -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <!--Set up page and import all stylesheet dependecies -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simply Taxify</title>
 
-  <title>Simply Taxify</title>
+    <link rel="icon" href="static/img/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="static\css\app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-  <link rel="icon" href="static/img/logo.png" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="static\css\app.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+  <body>
+    <!--Header-->
+    <header>
+      <a href="/" class="logo">Simply Taxify</a>
+      <ul>
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="services">Services</a></li>
+        <li><a href="work">Careers</a></li>
+        <li><a href="apply">Apply</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/admin">Admin</a></li>
+      </ul>
+    </header>
 
-<body>
-  <!--Header-->
-  <header>
-    <a href="/" class="logo">Simply Taxify</a>
-    <ul>
-      <li><a href="/" class="active">Home</a></li>
-      <li><a href="services">Services</a></li>
-      <li><a href="work">Careers</a></li>
-      <li><a href="apply">Apply</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="/admin">Admin</a></li>
-    </ul>
-  </header>
+    <!-- Main Section -->
+    <section class="home" id="home">
+      <img src="static\img\tax-career-header.png" id="header-pic" />
+      <h2 id="text" class="typing-effect">Careers At Simply Taxify</h2>
+    </section>
 
-  <!-- Main Section -->
-  <section class="home" id="home">
-    <img src="static\img\tax-career-header.png" id="header-pic" />
-    <h2 id="text" class="typing-effect">Careers At Simply Taxify</h2>
-  </section>
+    <!-- Google Translate Element -->
+    <div id="google_translate_element"></div>
 
-  <!-- Google Translate Element -->
-  <div id="google_translate_element"></div>
-
-  <!--Chatbot embed-->
-  <div>
-    <script type="module"
-      src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"></script>
-    <zapier-interfaces-chatbot-embed is-popup="true" chatbot-id="clr2gyugf00182g6bm4zixygq" height="700px"
-      width="500px"></zapier-interfaces-chatbot-embed>
-  </div>
-
-  <!-- Company Culture section -->
-  <section class="gradient-section" id="comapny-culture">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-          <img src="static\img\company-culture.png" class="img-fluid rounded" data-aos="fade-up-right"
-            data-aos-duration="500" style="max-width: 100%; height: auto" alt="Company Culture Image" />
-        </div>
-        <div class="col-md-8">
-          <h2 class="p-5 text-center" data-aos="fade-down" data-aos-duration="500">
-            Our Culture
-          </h2>
-          <p class="px-5 pb-5 text-center" data-aos="fade-up" data-aos-duration="500">
-            At Simply Taxify, our company culture thrives on innovation, collaboration, and growth. We cultivate an
-            environment where curiosity is encouraged, and ideas are welcomed from every corner of our team. Integrity
-            and professionalism guide our interactions, fostering a supportive atmosphere where employees can flourish
-            personally and professionally. We prioritize transparency and open communication, ensuring that everyone
-            feels heard and valued. Our commitment to excellence drives us to continuously improve and adapt, keeping us
-            at the forefront of the tax industry while maintaining a fun and rewarding workplace for all.
-          </p>
-        </div>
-      </div>
+    <!--Chatbot embed-->
+    <div>
+      <script
+        type="module"
+        src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
+      ></script>
+      <zapier-interfaces-chatbot-embed
+        is-popup="true"
+        chatbot-id="clr2gyugf00182g6bm4zixygq"
+        height="700px"
+        width="500px"
+      ></zapier-interfaces-chatbot-embed>
     </div>
-  </section>
 
-  <!-- Reasons to apply section -->
-  <section class="p-5 bg-light services" style="background: linear-gradient(#22ba73, #5fe798)">
-    <h2 class="mt-5 mb-5 text-center" data-aos="zoom-in">Why Simply Taxify</h2>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-duration="500">
-          <div class="card h-100 text-center">
-            <img src="static/img/innovation_icon.png" class="card-img-top img-fluid p-4" style="height: 75%;"
-              alt="Innovation Icon">
-            <div class="card-body">
-              <h3 class="card-title">Innovative Environment</h3>
-              <p class="card-text">Work in an innovative environment where tax law is always being pushed to its
-                boundaries.</p>
-            </div>
+    <!-- Company Culture section -->
+    <section class="gradient-section" id="comapny-culture">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="static\img\company-culture.png"
+              class="img-fluid rounded"
+              data-aos="fade-up-right"
+              data-aos-duration="500"
+              style="max-width: 100%; height: auto"
+              alt="Company Culture Image"
+            />
           </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="500">
-          <div class="card h-100 text-center">
-            <img src="static/img/professional_growth_icon.png" class="card-img-top img-fluid p-4" style="height: 73%;"
-              alt="Professional Growth Icon">
-            <div class="card-body">
-              <h3 class="card-title">Professional Growth Opportunities</h3>
-              <p class="card-text">Take advantage of our tuition reimbursement and certification training programs.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-duration="500">
-          <div class="card h-100 text-center">
-            <img src="static/img/impact_icon.png" class="card-img-top img-fluid p-4" style="height: 75%;"
-              alt="Impact Icon">
-            <div class="card-body">
-              <h3 class="card-title">Visible Impact</h3>
-              <p class="card-text">Make an impact on individuals and have a positive effect on the world of taxes.</p>
-            </div>
+          <div class="col-md-8">
+            <h2
+              class="p-5 text-center"
+              data-aos="fade-down"
+              data-aos-duration="500"
+            >
+              Our Culture
+            </h2>
+            <p
+              class="px-5 pb-5 text-center"
+              data-aos="fade-up"
+              data-aos-duration="500"
+            >
+              At Simply Taxify, our company culture thrives on innovation,
+              collaboration, and growth. We cultivate an environment where
+              curiosity is encouraged, and ideas are welcomed from every corner
+              of our team. Integrity and professionalism guide our interactions,
+              fostering a supportive atmosphere where employees can flourish
+              personally and professionally. We prioritize transparency and open
+              communication, ensuring that everyone feels heard and valued. Our
+              commitment to excellence drives us to continuously improve and
+              adapt, keeping us at the forefront of the tax industry while
+              maintaining a fun and rewarding workplace for all.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- Reasons to apply section -->
+    <section
+      class="p-5 bg-light services"
+      style="background: linear-gradient(#22ba73, #5fe798)"
+    >
+      <h2 class="mt-5 mb-5 text-center" data-aos="zoom-in">
+        Why Simply Taxify
+      </h2>
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 mb-4"
+            data-aos="fade-right"
+            data-aos-duration="500"
+          >
+            <div class="card h-100 text-center">
+              <img
+                src="static/img/innovation_icon.png"
+                class="card-img-top img-fluid p-4"
+                style="height: 75%"
+                alt="Innovation Icon"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Innovative Environment</h3>
+                <p class="card-text">
+                  Work in an innovative environment where tax law is always
+                  being pushed to its boundaries.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="500">
+            <div class="card h-100 text-center">
+              <img
+                src="static/img/professional_growth_icon.png"
+                class="card-img-top img-fluid p-4"
+                style="height: 73%"
+                alt="Professional Growth Icon"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Professional Growth Opportunities</h3>
+                <p class="card-text">
+                  Take advantage of our tuition reimbursement and certification
+                  training programs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 mb-4"
+            data-aos="fade-left"
+            data-aos-duration="500"
+          >
+            <div class="card h-100 text-center">
+              <img
+                src="static/img/impact_icon.png"
+                class="card-img-top img-fluid p-4"
+                style="height: 75%"
+                alt="Impact Icon"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Visible Impact</h3>
+                <p class="card-text">
+                  Make an impact on individuals and have a positive effect on
+                  the world of taxes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Diversity & Inclusion section -->
-  <section class="gradient-section" id="diversity-inclusion" style="background-color: #d1ecf1">
+    <!-- Diversity & Inclusion section -->
+    <section
+      class="gradient-section"
+      id="diversity-inclusion"
+      style="background-color: #d1ecf1"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2
+              class="p-5 text-center"
+              data-aos="fade-down"
+              data-aos-duration="500"
+            >
+              Diversity & Inclusion
+            </h2>
+            <p
+              class="px-5 pb-5 text-center"
+              data-aos="fade-up"
+              data-aos-duration="500"
+            >
+              Diversity and inclusion are fundamental values at Simply Taxify,
+              woven into the fabric of our company culture. We celebrate and
+              embrace the uniqueness of every individual, fostering an
+              environment where diverse perspectives are not only respected but
+              actively sought after. By championing inclusivity, we aim to
+              create a workplace where everyone feels valued, empowered, and
+              inspired to contribute their best. Through our commitment to
+              diversity, we strive to build a stronger, more innovative team
+              that reflects the rich tapestry of the global community we serve.
+            </p>
+          </div>
+          <div
+            class="col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="static\img\diversity-inclusion.png"
+              class="img-fluid rounded"
+              data-aos="fade-up-left"
+              data-aos-duration="500"
+              style="max-width: 100%; height: auto"
+              alt="Diversity & Inclusion Image "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Available postions section-->
+    <h1 class="p-5 text-center" data-aos="zoom-in">Available Positions</h1>
+    <!--Tax preparer-->
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
-          <h2 class="p-5 text-center" data-aos="fade-down" data-aos-duration="500">
-            Diversity & Inclusion
-          </h2>
-          <p class="px-5 pb-5 text-center" data-aos="fade-up" data-aos-duration="500">
-            Diversity and inclusion are fundamental values at Simply Taxify, woven into the fabric of our company
-            culture. We celebrate and embrace the uniqueness of every individual, fostering an environment where diverse
-            perspectives are not only respected but actively sought after. By championing inclusivity, we aim to create
-            a workplace where everyone feels valued, empowered, and inspired to contribute their best. Through our
-            commitment to diversity, we strive to build a stronger, more innovative team that reflects the rich tapestry
-            of the global community we serve.
-          </p>
-        </div>
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-          <img src="static\img\diversity-inclusion.png" class="img-fluid rounded" data-aos="fade-up-left"
-            data-aos-duration="500" style="max-width: 100%; height: auto" alt="Diversity & Inclusion Image " />
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!--Available postions section-->
-  <h1 class="p-5 text-center" data-aos="zoom-in">Available Positions</h1>
-  <!--Tax preparer-->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 text-center" data-aos="zoom-in-right" data-aos-offset="100" data-aos-duration="500">
-        <img src="static\img\tax_preparer.jpg" class="img-fluid rounded" />
-        <h3 class="text-center p-3">Tax Preparer</h3>
-        <button type="button" class="custom-button mb-3" data-bs-toggle="collapse"
-          data-bs-target="#tax-preparer-qualifications">
-          Qualifications
-        </button>
-        <div id="tax-preparer-qualifications" class="collapse">
-          <li class="p-2">
-            Strong sales and marketing skills to attract new clients
-          </li>
-          <li class="p-2">
-            In-depth knowledge of tax laws, regulations, and procedures
-          </li>
-          <li class="p-2">
-            Ability to analyze financial data and identify potential tax
-            deductions or credits
-          </li>
-          <li class="p-2">
-            Strong organizational skills to manage multiple client accounts
-            simultaneously
-          </li>
-          <li class="p-2">
-            Excellent typing skills for efficient data entry
-          </li>
-        </div>
-        <br />
-        <button type="button" class="custom-button mb-3" data-bs-toggle="collapse"
-          data-bs-target="#tax-preparer-responsibilities">
-          Responsibilities
-        </button>
-        <div id="tax-preparer-responsibilities" class="collapse">
-          <li class="p-2">
-            Prepare and complete accurate tax returns for individuals and
-            businesses
-          </li>
-          <li class="p-2">
-            Review financial records, such as income statements and balance
-            sheets, to determine tax liability, if applicable
-          </li>
-          <li class="p-2">
-            Analyze tax regulations and stay up-to-date on changes in tax laws
-          </li>
-          <li class="p-2">
-            Provide tax planning advice to clients based on their financial
-            goals and objectives
-          </li>
-          <li class="p-2">
-            Assist clients with tax-related questions and concerns
-          </li>
-          <li class="p-2">
-            Utilize tax software programs to accurately calculate and file
-            taxes
-          </li>
-        </div>
-        <br />
-        <button type="button" class="custom-button mb-3" data-bs-toggle="collapse"
-          data-bs-target="#tax-preparer-benefits">
-          Benefits
-        </button>
-        <div id="tax-preparer-benefits" class="collapse">
-          <p>$20.00 - $40.00 per hour</p>
-          <p>Full time</p>
-          <p>Bonus opportunities</p>
-          <p>Health Insurance</p>
-          <p>Retirement Planning</p>
-        </div>
-      </div>
-      <!--Tax accountant-->
-      <div class="pb-5 col-md-4 text-center" data-aos="zoom-in-down" data-aos-offset="150" data-aos-duration="500">
-        <img src="static\img\tax_accountant.jpg" class="img-fluid rounded" />
-        <h3 class="text-center p-3">Tax Accountant</h3>
-        <button type="button" class="custom-button mb-3" data-bs-toggle="collapse"
-          data-bs-target="#accountant-qualifications">
-          Qualifications
-        </button>
-        <div id="accountant-qualifications" class="collapse">
-          <li class="p-2">CPA designation and/or advanced degree</li>
-          <li class="p-2">
-            Experience in life/health, property/casualty, and/or general
-            corporate taxation
-          </li>
-          <li class="p-2">
-            Possesses extensive tax knowledge to identify complex tax issues,
-            research solutions, and develop appropriate recommendations
-          </li>
-          <li class="p-2">
-            Self-motivated with strong critical-thinking skills and keen
-            attention to detail
-          </li>
-          <li class="p-2">
-            Able to work independently to guarantee the accurate and timely
-            completion of tasks
-          </li>
-        </div>
-        <br />
-        <button type="button" class="custom-button mb-3" data-bs-toggle="collapse"
-          data-bs-target="#accountant-responsibilities">
-          Responsibilities
-        </button>
-        <div id="accountant-responsibilities" class="collapse">
-          <li class="p-2">
-            This role will focus on ensuring compliance with all aspects of
-            income tax reporting and filings, including ASC 740, SSAP 101, the
-            Internal Revenue Code, and state/local income tax laws and
-            regulations
-          </li>
-          <li class="p-2">
-            The Tax Accountant uses best practices and knowledge of internal
-            and external business issues to ensure timely and accurate filing
-            of income tax returns, payment of taxes, and calculation of
-            financial statement provisions for assigned companies
-          </li>
-          <li class="p-2">
-            The ideal candidate demonstrates good judgment in selecting
-            methods and techniques for obtaining solutions to a wide range of
-            matters varying in complexity and scope and for identifying and
-            implementing improvements to policies and processes
-          </li>
-          <li class="p-2">
-            Prepares or coordinates the preparation of journal entries and
-            account reconciliations on a timely and accurate basis
-          </li>
-          <li class="p-2">
-            Stays aware of changes in tax accounting laws and regulations
-          </li>
-        </div>
-        <br />
-        <button type="button" class="custom-button mb-3" data-bs-toggle="collapse"
-          data-bs-target="#accountant-benefits">
-          Benefits
-        </button>
-        <div id="accountant-benefits" class="collapse">
-          <p>$30.00 - $40.00 per hour</p>
-          <p>Bonus opportunities</p>
-          <p>Health Insurance</p>
-          <p>Retirement Planning</p>
-        </div>
-        <!--Tax advisor-->
-      </div>
-      <div class="col-md-4 text-center" data-aos="zoom-in-left" data-aos-offset="200" data-aos-duration="500">
-        <img src="static\img\tax_advisor.jpeg" class="img-fluid rounded" />
-        <h3 class="text-center p-3">Tax Advisor</h3>
-        <button type="button" class="custom-button mb-3" data-bs-toggle="collapse"
-          data-bs-target="#advisor-qualifications">
-          Qualifications
-        </button>
-        <div id="advisor-qualifications" class="collapse">
-          <li class="p-2">
-            The minimum qualifications necessary to become a CPA Tax Advisor
-            are a background in the filing of over 30 individual 1040 tax
-            returns for both federal and state purposes for at least two
-            years, utilizing commercial tax preparation software
-          </li>
-          <li class="p-2">
-            An EA, CPA, or practicing attorney with an unrestricted
-            certification and comprehensive tax preparation expertise plus
-            advanced knowledge of tax regulations is required for a position
-            at our organization
-          </li>
-          <li class="p-2">
-            Profound dedication to guiding clients through the intricacies of
-            taxation reflects your unwavering commitment to service excellence
-          </li>
-        </div>
-        <br />
-        <button type="button" class="custom-button mb-3" data-bs-toggle="collapse"
-          data-bs-target="#advisor-responsibilities">
-          Responsibilities
-        </button>
-        <div id="advisor-responsibilities" class="collapse">
-          <li class="p-2">
-            Your role encompasses offering tax guidance, creating complete
-            returns, performing tax computations, and handling software or
-            product-related concerns
-          </li>
-          <li class="p-2">
-            You will analyze the financial records of individuals and
-            businesses and guide them through their tax returns
-          </li>
-          <li class="p-2">
-            As a virtual assistant, your primary task will be to assist
-            customers, while also keeping track of those interactions through
-            comprehensive documentation
-          </li>
-        </div>
-        <br />
-        <button type="button" class="custom-button mb-3" data-bs-toggle="collapse" data-bs-target="#advisor-benefits">
-          Benefits
-        </button>
-        <div id="advisor-benefits" class="collapse">
-          <p>$25.00 - $40.00 per hour</p>
-          <p>Bonus opportunities</p>
-          <p>Health Insurance</p>
-          <p>Retirement Planning</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--Work with us section-->
-  <section class="p-3" style="background-color: #d1ecf1">
-    <h1 class="p-5 text-center" data-aos="zoom-in">Work With Us</h1>
-    <div class="d-flex justify-content-center" data-aos="flip-up">
-      <a href="apply">
-        <button type="button" class="custom-button mb-4">Apply Here</button>
-      </a>
-    </div>
-  </section>
-
-  <!--Import javascript dependecies-->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="static/js/index.js"></script>
-
-  <!-- Google Translate script -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        { pageLanguage: "en" },
-        "google_translate_element"
-      );
-    }
-  </script>
-  <script type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
-
-<!--Footer-->
-<footer class="contact bg-light py-5" id="contact">
-  <div class="container text-center">
-    <h2 class="mb-4">Contact Information</h2>
-    <p class="mb-4">
-      Feel free to reach out to us for any inquiries or assistance.
-    </p>
-
-    <!-- Contact Details -->
-    <div class="row">
-      <div class="col-md-4">
-        <h4>Email</h4>
-        <p>info@simplytaxify.com</p>
-      </div>
-      <div class="col-md-4">
-        <h4>Phone</h4>
-        <p>(309) 205-2282</p>
-      </div>
-      <div class="col-md-4">
-        <h4>Address</h4>
-        <p>123 Main Street, Bloomington IL</p>
-      </div>
-
-      <!-- Newsletter Signup -->
-      <div class="my-5">
-        <h4 class="mb-4">Subscribe to our Newsletter</h4>
-        <form class="d-flex justify-content-center">
-          <input type="email" class="form-control w-50" placeholder="Enter your email" />
-          <button type="submit" class="btn custom-button ms-2">
-            Subscribe
+        <div
+          class="col-md-4 text-center"
+          data-aos="zoom-in-right"
+          data-aos-offset="100"
+          data-aos-duration="500"
+        >
+          <img src="static\img\tax_preparer.jpg" class="img-fluid rounded" />
+          <h3 class="text-center p-3">Tax Preparer</h3>
+          <button
+            type="button"
+            class="custom-button mb-3"
+            data-bs-toggle="collapse"
+            data-bs-target="#tax-preparer-qualifications"
+          >
+            Qualifications
           </button>
-        </form>
+          <div id="tax-preparer-qualifications" class="collapse">
+            <li class="p-2">
+              Strong sales and marketing skills to attract new clients
+            </li>
+            <li class="p-2">
+              In-depth knowledge of tax laws, regulations, and procedures
+            </li>
+            <li class="p-2">
+              Ability to analyze financial data and identify potential tax
+              deductions or credits
+            </li>
+            <li class="p-2">
+              Strong organizational skills to manage multiple client accounts
+              simultaneously
+            </li>
+            <li class="p-2">
+              Excellent typing skills for efficient data entry
+            </li>
+          </div>
+          <br />
+          <button
+            type="button"
+            class="custom-button mb-3"
+            data-bs-toggle="collapse"
+            data-bs-target="#tax-preparer-responsibilities"
+          >
+            Responsibilities
+          </button>
+          <div id="tax-preparer-responsibilities" class="collapse">
+            <li class="p-2">
+              Prepare and complete accurate tax returns for individuals and
+              businesses
+            </li>
+            <li class="p-2">
+              Review financial records, such as income statements and balance
+              sheets, to determine tax liability, if applicable
+            </li>
+            <li class="p-2">
+              Analyze tax regulations and stay up-to-date on changes in tax laws
+            </li>
+            <li class="p-2">
+              Provide tax planning advice to clients based on their financial
+              goals and objectives
+            </li>
+            <li class="p-2">
+              Assist clients with tax-related questions and concerns
+            </li>
+            <li class="p-2">
+              Utilize tax software programs to accurately calculate and file
+              taxes
+            </li>
+          </div>
+          <br />
+          <button
+            type="button"
+            class="custom-button mb-3"
+            data-bs-toggle="collapse"
+            data-bs-target="#tax-preparer-benefits"
+          >
+            Benefits
+          </button>
+          <div id="tax-preparer-benefits" class="collapse">
+            <p>$20.00 - $40.00 per hour</p>
+            <p>Full time</p>
+            <p>Bonus opportunities</p>
+            <p>Health Insurance</p>
+            <p>Retirement Planning</p>
+          </div>
+        </div>
+        <!--Tax accountant-->
+        <div
+          class="pb-5 col-md-4 text-center"
+          data-aos="zoom-in-down"
+          data-aos-offset="150"
+          data-aos-duration="500"
+        >
+          <img src="static\img\tax_accountant.jpg" class="img-fluid rounded" />
+          <h3 class="text-center p-3">Tax Accountant</h3>
+          <button
+            type="button"
+            class="custom-button mb-3"
+            data-bs-toggle="collapse"
+            data-bs-target="#accountant-qualifications"
+          >
+            Qualifications
+          </button>
+          <div id="accountant-qualifications" class="collapse">
+            <li class="p-2">CPA designation and/or advanced degree</li>
+            <li class="p-2">
+              Experience in life/health, property/casualty, and/or general
+              corporate taxation
+            </li>
+            <li class="p-2">
+              Possesses extensive tax knowledge to identify complex tax issues,
+              research solutions, and develop appropriate recommendations
+            </li>
+            <li class="p-2">
+              Self-motivated with strong critical-thinking skills and keen
+              attention to detail
+            </li>
+            <li class="p-2">
+              Able to work independently to guarantee the accurate and timely
+              completion of tasks
+            </li>
+          </div>
+          <br />
+          <button
+            type="button"
+            class="custom-button mb-3"
+            data-bs-toggle="collapse"
+            data-bs-target="#accountant-responsibilities"
+          >
+            Responsibilities
+          </button>
+          <div id="accountant-responsibilities" class="collapse">
+            <li class="p-2">
+              This role will focus on ensuring compliance with all aspects of
+              income tax reporting and filings, including ASC 740, SSAP 101, the
+              Internal Revenue Code, and state/local income tax laws and
+              regulations
+            </li>
+            <li class="p-2">
+              The Tax Accountant uses best practices and knowledge of internal
+              and external business issues to ensure timely and accurate filing
+              of income tax returns, payment of taxes, and calculation of
+              financial statement provisions for assigned companies
+            </li>
+            <li class="p-2">
+              The ideal candidate demonstrates good judgment in selecting
+              methods and techniques for obtaining solutions to a wide range of
+              matters varying in complexity and scope and for identifying and
+              implementing improvements to policies and processes
+            </li>
+            <li class="p-2">
+              Prepares or coordinates the preparation of journal entries and
+              account reconciliations on a timely and accurate basis
+            </li>
+            <li class="p-2">
+              Stays aware of changes in tax accounting laws and regulations
+            </li>
+          </div>
+          <br />
+          <button
+            type="button"
+            class="custom-button mb-3"
+            data-bs-toggle="collapse"
+            data-bs-target="#accountant-benefits"
+          >
+            Benefits
+          </button>
+          <div id="accountant-benefits" class="collapse">
+            <p>$30.00 - $40.00 per hour</p>
+            <p>Bonus opportunities</p>
+            <p>Health Insurance</p>
+            <p>Retirement Planning</p>
+          </div>
+          <!--Tax advisor-->
+        </div>
+        <div
+          class="col-md-4 text-center"
+          data-aos="zoom-in-left"
+          data-aos-offset="200"
+          data-aos-duration="500"
+        >
+          <img src="static\img\tax_advisor.jpeg" class="img-fluid rounded" />
+          <h3 class="text-center p-3">Tax Advisor</h3>
+          <button
+            type="button"
+            class="custom-button mb-3"
+            data-bs-toggle="collapse"
+            data-bs-target="#advisor-qualifications"
+          >
+            Qualifications
+          </button>
+          <div id="advisor-qualifications" class="collapse">
+            <li class="p-2">
+              The minimum qualifications necessary to become a CPA Tax Advisor
+              are a background in the filing of over 30 individual 1040 tax
+              returns for both federal and state purposes for at least two
+              years, utilizing commercial tax preparation software
+            </li>
+            <li class="p-2">
+              An EA, CPA, or practicing attorney with an unrestricted
+              certification and comprehensive tax preparation expertise plus
+              advanced knowledge of tax regulations is required for a position
+              at our organization
+            </li>
+            <li class="p-2">
+              Profound dedication to guiding clients through the intricacies of
+              taxation reflects your unwavering commitment to service excellence
+            </li>
+          </div>
+          <br />
+          <button
+            type="button"
+            class="custom-button mb-3"
+            data-bs-toggle="collapse"
+            data-bs-target="#advisor-responsibilities"
+          >
+            Responsibilities
+          </button>
+          <div id="advisor-responsibilities" class="collapse">
+            <li class="p-2">
+              Your role encompasses offering tax guidance, creating complete
+              returns, performing tax computations, and handling software or
+              product-related concerns
+            </li>
+            <li class="p-2">
+              You will analyze the financial records of individuals and
+              businesses and guide them through their tax returns
+            </li>
+            <li class="p-2">
+              As a virtual assistant, your primary task will be to assist
+              customers, while also keeping track of those interactions through
+              comprehensive documentation
+            </li>
+          </div>
+          <br />
+          <button
+            type="button"
+            class="custom-button mb-3"
+            data-bs-toggle="collapse"
+            data-bs-target="#advisor-benefits"
+          >
+            Benefits
+          </button>
+          <div id="advisor-benefits" class="collapse">
+            <p>$25.00 - $40.00 per hour</p>
+            <p>Bonus opportunities</p>
+            <p>Health Insurance</p>
+            <p>Retirement Planning</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Work with us section-->
+    <section class="p-3" style="background-color: #d1ecf1">
+      <h1 class="p-5 text-center" data-aos="zoom-in">Work With Us</h1>
+      <div class="d-flex justify-content-center" data-aos="flip-up">
+        <a href="apply">
+          <button type="button" class="custom-button mb-4">Apply Here</button>
+        </a>
+      </div>
+    </section>
+
+    <!--Import javascript dependecies-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="static/js/index.js"></script>
+
+    <!-- Google Translate script -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+
+  <!--Footer-->
+  <footer class="contact bg-light py-5" id="contact">
+    <div class="container">
+      <div class="row">
+        <!-- Contact Information -->
+        <div class="col-md-6 text-center">
+          <h2 class="mb-4">Contact Information</h2>
+          <div class="row mb-4">
+            <div class="col-md-4">
+              <h4>Email</h4>
+              <p>info@simplytaxify.com</p>
+            </div>
+            <div class="col-md-4">
+              <h4>Phone</h4>
+              <p>(309) 205-2282</p>
+            </div>
+            <div class="col-md-4">
+              <h4>Address</h4>
+              <p>1110 Lockenvitz Ln, Bloomington, IL 61704</p>
+            </div>
+          </div>
+
+          <!-- Newsletter Signup -->
+          <div class="row">
+            <div class="col text-center">
+              <h4 class="mb-4">Subscribe to our Newsletter</h4>
+              <form class="d-flex justify-content-center">
+                <input
+                  type="email"
+                  class="form-control w-75"
+                  placeholder="Enter your email"
+                />
+                <button type="submit" class="btn custom-button ms-2">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="col-md-6 text-center">
+          <h2 class="mb-4">Location</h2>
+          <div style="width: 100%">
+            <iframe
+              width="650"
+              height="250"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?width=720&amp;height=400&amp;hl=en&amp;q=1110%20Lockenvitz%20Ln,%20Bloomington,%20IL%2061704+(Simply%20Taxify)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ><a href="https://www.gps.ie/">gps systems</a></iframe
+            >
+          </div>
+        </div>
       </div>
 
-      <img src="static\img\simply-taxify.jpg" class="d-block mx-auto" style="width: 25%; border-radius: 5%;" />
+      <!-- Social Media Icons -->
+      <div class="row mt-5">
+        <div class="col text-center">
+          <a
+            href="https://www.facebook.com/SimplyTaxify"
+            target="_blank"
+            class="me-3"
+            ><i class="fab fa-facebook fa-2x"></i
+          ></a>
+          <a href="https://www.instagram.com/simply_taxify/" target="_blank"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+        </div>
+      </div>
     </div>
-    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x mt-5"></i></a>
-    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-  </div>
-</footer>
-
+  </footer>
 </html>

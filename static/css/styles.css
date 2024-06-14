@@ -11,7 +11,12 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    background: linear-gradient(#ffffff, #5fe798);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.fade-in {
+    opacity: 1;
 }
 
 header {
