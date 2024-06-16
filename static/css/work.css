@@ -91,7 +91,7 @@ section.home {
     color: #fff;
     font-size: 4vw;
     z-index: 9;
-    left: 35%; /* Adjust the left position as needed */
+    left: 37%; /* Adjust the left position as needed */
     top: 50%;
     transform: translateY(-50%);
     overflow: hidden;

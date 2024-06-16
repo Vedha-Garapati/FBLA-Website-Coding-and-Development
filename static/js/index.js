@@ -1,6 +1,4 @@
-
-
-// Add the fade-in class to the body when the DOM is ready
+    // Add the fade-in class to the body when the DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.add('fade-in');
     AOS.init();

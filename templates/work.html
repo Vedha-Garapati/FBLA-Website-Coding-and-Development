@@ -50,19 +50,15 @@
   <!--Application form-->
   <div>
     <h1 class="p-5 text-center" data-aos="zoom-in" data-aos-duration="500">Work With Us</h1>
-    <form action="thank" method="POST" class="p-3 rounded col-md-10 mx-auto" enctype="multipart/form-data">
+    <form method="POST" class="p-3 rounded col-md-10 mx-auto" enctype="multipart/form-data">
       {% csrf_token %}
 
       <!-- Job Selection -->
       <div class="row g-3">
         <div class="col-md-12">
-          <label for="job" class="form-label">Which Job Do You Want to Apply For?</label>
-          <select name="job" id="job" class="form-select" required>
-            <option value="">Select a job</option>
-            <option value="Tax Preparer">Tax Preparer</option>
-            <option value="Tax Accountant">Tax Accountant</option>
-            <option value="Tax Advisor">Tax Advisor</option>
-          </select>
+          <label for="position" class="form-label">Position: </label>
+          <input name="position" type="text" class="form-control" id="position" required minlength="1" maxlength="50"
+            title="Position must be between 1 and 50 characters long." />
         </div>
       </div>
 
@@ -268,70 +264,12 @@
               title="Job description must be between 10 and 1000 characters long."></textarea>
           </div>
         </div>
-
-        <!-- Additional Employment -->
-        <h2 class="p-5 text-center" data-aos="zoom-in" data-aos-duration="500">Additional Employment</h2>
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label for="additionalStartDate" class="form-label">Start Date:</label>
-            <input name="additionalStartDate" type="date" class="form-control" id="additionalStartDate"
-              title="Please enter a valid start date." />
-          </div>
-          <div class="col-md-6">
-            <label for="additionalEndDate" class="form-label">End Date:</label>
-            <input name="additionalEndDate" type="date" class="form-control" id="additionalEndDate"
-              title="Please enter a valid end date." />
-          </div>
-        </div>
-
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label for="additionalJobTitle" class="form-label">Job Title:</label>
-            <input name="additionalJobTitle" type="text" class="form-control" id="additionalJobTitle" minlength="1"
-              maxlength="100" title="Job title must be between 1 and 100 characters long." />
-          </div>
-          <div class="col-md-6">
-            <label for="additionalCompany" class="form-label">Company:</label>
-            <input name="additionalCompany" type="text" class="form-control" id="additionalCompany" minlength="1"
-              maxlength="100" title="Company name must be between 1 and 100 characters long." />
-          </div>
-        </div>
-
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label for="additionalCity" class="form-label">City:</label>
-            <input name="additionalCity" type="text" class="form-control" id="additionalCity" minlength="1"
-              maxlength="50" title="City must be between 1 and 50 characters long." />
-          </div>
-          <div class="col-md-6">
-            <label for="additionalState" class="form-label">State:</label>
-            <input name="additionalState" type="text" class="form-control" id="additionalState" minlength="2"
-              maxlength="2" title="State must be a 2-letter code." />
-          </div>
-        </div>
-
-        <div class="row g-3">
-          <div class="col-md-12">
-            <label for="additionalReasonForLeaving" class="form-label">Reason For Leaving:</label>
-            <input name="additionalReasonForLeaving" type="text" class="form-control" id="additionalReasonForLeaving"
-              minlength="1" maxlength="100" title="Reason for leaving must be between 1 and 100 characters long." />
-          </div>
-        </div>
-
-        <div class="row g-3">
-          <div class="col-md-12">
-            <label for="additionalJobDescription" class="form-label">Job Description:</label>
-            <textarea name="additionalJobDescription" class="form-control" id="additionalJobDescription" rows="4"
-              minlength="10" maxlength="1000"
-              title="Job description must be between 10 and 1000 characters long."></textarea>
-          </div>
-        </div>
-
+        
         <!-- Additional Information -->
         <div class="row g-3">
           <div class="col-md-12">
-            <label for="otherJobs" class="form-label">Additional Info:</label>
-            <textarea name="otherJobs" class="form-control" id="extraInfo" rows="4" minlength="00" maxlength="1000"
+            <label for="extraInfo" class="form-label">Additional Info:</label>
+            <textarea name="extraInfo" class="form-control" id="extraInfo" rows="4" maxlength="1000"
               title="Additional info must be between 10 and 1000 characters long."></textarea>
           </div>
         </div>
