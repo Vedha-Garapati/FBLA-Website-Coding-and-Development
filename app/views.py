@@ -20,71 +20,128 @@ def index(request):
         apply = Application()
 
         #Grabs the user input data from the input box that has the name of 'name' on it and stores it in this variable
-        name=request.POST.get('name')
+        firstName=request.POST.get('firstName')
 
         #Stores the variable we initalized earlier in this code segement and stores it in the 'name' section of the Application dataset
-        apply.name=name
+        apply.firstName=firstName
 
-        #Grabs the user input data from the input box that has the name of 'email' on it and stores it in this variable
-        email=request.POST.get('email')
+        lastName=request.POST.get('lastName')
 
-        #Stores the variable we initalized earlier in this code segement and stores it in the 'email' section of the Application dataset
-        apply.email=email
+        apply.lastName=lastName
 
-        #Grabs the user input data from the input box that has the name of 'address' on it and stores it in this variable
+        position=request.POST.get('position')
+
+        apply.position=position
+
         address=request.POST.get('address')
 
-        #Stores the variable we initalized earlier in this code segement and stores it in the 'address' section of the Application dataset
         apply.address=address
 
-        #Grabs the user input data from the input box that has the name of 'education' on it and stores it in this variable
-        education=request.POST.get('education')
+        city=request.POST.get('city')
 
-        #Grabs the user input data from the input box that has the name of 'certify' on it and stores it in this variable
-        certify=request.POST.get('certify')
+        apply.city=city
 
-        #Grabs the user input data from the input box that has the name of 'taxSoftware' on it and stores it in this variable
-        taxSoftware=request.POST.get('taxSoftware')
+        state=request.POST.get('state')
 
-        #Grabs the user input data from the input box that has the name of 'file' on it and stores it in this variable
-        file=request.POST.get('file')
+        apply.state=state
 
-        #Grabs the user input data from the input box that has the name of 'availability' on it and stores it in this variable
-        availability=request.POST.get('availability')
+        zip=request.POST.get('zip')
 
-        #Grabs the user input data from the input box that has the name of 'phone' on it and stores it in this variable
+        apply.zip=zip
+
         phone=request.POST.get('phone')
 
-        #Grabs the user input data from the input box that has the name of 'years' on it and stores it in this variable
-        years=request.POST.get('years')
-
-        #Grabs the user input data from the input box that has the name of 'workExperience' on it and stores it in this variable
-        workExperience=request.POST.get('workExperience')
-
-        middle=request.POST.get('middle')
-        #Stores the variable we initalized earlier in this code segement and stores it in the 'education' section of the Application dataset
-        apply.education=education
-
-        #Stores the variable we initalized earlier in this code segement and stores it in the 'certify' section of the Application dataset
-        apply.certify=certify
-
-        #Stores the variable we initalized earlier in this code segement and stores it in the 'taxSoftware' section of the Application dataset
-        apply.taxSoftware=taxSoftware
-
-        #Stores the variable we initalized earlier in this code segement and stores it in the 'file' section of the Application dataset
-        apply.middle=middle
-
-        #Stores the variable we initalized earlier in this code segement and stores it in the 'availability' section of the Application dataset
-        apply.availability=availability
-
-        #Stores the variable we initalized earlier in this code segement and stores it in the 'phone' section of the Application dataset
         apply.phone=phone
 
-        #Stores the variable we initalized earlier in this code segement and stores it in the 'years' section of the Application dataset
+        email=request.POST.get('email')
+
+        apply.email=email
+
+        reference1Name=request.POST.get('reference1Name')
+
+        apply.reference1Name=reference1Name
+
+        reference1Relationship=request.POST.get('reference1Relationship')
+
+        apply.reference1Relationship=reference1Relationship
+
+        reference1Phone=request.POST.get('reference1Phone')
+
+        apply.reference1Phone=reference1Phone
+
+        reference2Name=request.POST.get('reference2Name')
+
+        apply.reference2Name=reference2Name
+
+        reference2Relationship=request.POST.get('reference2Relationship')
+
+        apply.reference2Relationship=reference2Relationship
+
+        reference2Phone=request.POST.get('reference2Phone')
+
+        apply.reference2Phone=reference2Phone
+
+        reasonForApplying=request.POST.get('reasonForApplying')
+
+        apply.reasonForApplying=reasonForApplying
+
+        years=request.POST.get('years')
+
         apply.years=years
 
-        #Stores the variable we initalized earlier in this code segement and stores it in the 'workExperience' section of the Application dataset
-        apply.workExperience=workExperience
+        certifications=request.POST.get('certifications')
+
+        apply.certifications=certifications
+
+        availability=request.POST.get('availability')
+
+        apply.availability=availability
+
+        taxKnowledge=request.POST.get('taxKnowledge')
+
+        apply.taxKnowledge=taxKnowledge
+
+        taxSoftware=request.POST.get('taxSoftware')
+
+        apply.taxSoftware=taxSoftware
+
+        recentStartDate=request.POST.get('recentStartDate')
+
+        apply.recentStartDate=recentStartDate
+
+        recentEndDate=request.POST.get('recentEndDate')
+
+        apply.recentEndDate=recentEndDate
+
+        recentJobTitle=request.POST.get('recentJobTitle')
+
+        apply.recentJobTitle=recentJobTitle
+
+        recentCompany=request.POST.get('recentCompany')
+
+        apply.recentCompany=recentCompany
+
+        recentCity=request.POST.get('recentCity')
+
+        apply.recentCity=recentCity
+
+        recentState=request.POST.get('recentState')
+
+        apply.recentState=recentState
+
+        recentReasonForLeaving=request.POST.get('recentReasonForLeaving')
+
+        apply.recentReasonForLeaving=recentReasonForLeaving
+
+        recentJobDescription=request.POST.get('recentJobDescription')
+
+        apply.recentJobDescription=recentJobDescription
+
+        extraInfo=request.POST.get('extraInfo')
+
+        apply.extraInfo=extraInfo
+
+
 
         #Saves the current version of the application class in the admin database 
         apply.save()
