@@ -7,3 +7,9 @@ db.sqlite3
 node_modules/django/README.md
 package.json
 *.json
+click-8.1.7-py3-none-any.whl
+colorama-0.4.6-py2.py3-none-any.whl
+joblib-1.4.2-py3-none-any.whl
+nltk-3.8.1-py3-none-any.whl
+tqdm-4.66.4-py3-none-any.whl
+regex-2024.5.15-cp312-cp312-win_amd64.whl
