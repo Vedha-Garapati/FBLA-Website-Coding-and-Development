@@ -1,10 +1,10 @@
 File templates\AI.html has 94 lines
 File templates\app.html has 592 lines
 File templates\index.html has 397 lines
-File templates\services.html has 312 lines
+File templates\services.html has 309 lines
 File templates\thank_you.html has 33 lines
-File templates\work.html has 459 lines
-File static\js\index.js has 25 lines
+File templates\work.html has 397 lines
+File static\js\index.js has 23 lines
 File static\img\about-us.png has 9396 lines
 File static\img\apply-pic.png has 79812 lines
 File static\img\company-culture.png has 1508 lines
@@ -30,7 +30,7 @@ File static\img\sun.png has 822 lines
 File static\img\tax-career-header.png has 2743 lines
 File static\img\tax-header.png has 4513 lines
 File static\img\tax-service-header.png has 2865 lines
-File static\img\TaxPrepChecklist.pdf has 1900 lines
+File static\img\TaxPrepChecklist.pdf has 3469 lines
 File static\img\tax_accountant.jpg has 90 lines
 File static\img\tax_advisor.jpeg has 6563 lines
 File static\img\tax_preparer.jpg has 311 lines
@@ -42,8 +42,8 @@ File static\css\styles.css has 159 lines
 File static\css\thank.css has 46 lines
 File static\css\work.css has 130 lines
 Folder static\css has 603 lines
-Folder static\img has 128926 lines
-Folder static\js has 25 lines
+Folder static\img has 130495 lines
+Folder static\js has 23 lines
 File Simply_Taxify\asgi.py has 17 lines
 File Simply_Taxify\settings.py has 131 lines
 File Simply_Taxify\urls.py has 26 lines
@@ -268,6 +268,6 @@ Folder node_modules has 9179 lines
 File README.md has 23 lines
 File requirements.txt has 22 lines
 Folder Simply_Taxify has 192 lines
-Folder static has 129554 lines
-Folder templates has 1887 lines
-Total number of lines: 168280
+Folder static has 131121 lines
+Folder templates has 1822 lines
+Total number of lines: 169782
