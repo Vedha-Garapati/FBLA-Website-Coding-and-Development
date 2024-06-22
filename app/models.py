@@ -63,6 +63,9 @@ class Application(models.Model):
 
     extraInfo=models.TextField(null=True, blank=True)
 
+    overallScore=models.CharField(max_length=5,null=True,blank=True)
+
+
 
     def __str__(self):
         return str(self.firstName)#This method returns the name of the class as the category for this data set. In this case, it will return 'Application' but django will change the name of the dataset to 'Applications' automatically.
