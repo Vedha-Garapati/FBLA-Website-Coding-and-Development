@@ -1,267 +1,450 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <!--Set up page and import all stylesheet dependecies -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simply Taxify</title>
+    <link rel="icon" href="static/img/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="static\css\work.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-  <!--Set up page and import all stylesheet dependecies -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simply Taxify</title>
-  <link rel="icon" href="static/img/logo.png" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="static\css\work.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+  <body>
+    <!--Header-->
+    <header>
+      <a href="/" class="logo">Simply Taxify</a>
+      <ul>
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="services">Services</a></li>
+        <li><a href="work">Careers</a></li>
+        <li><a href="apply">Apply</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/admin">Admin</a></li>
+      </ul>
+    </header>
 
-<body>
-  <!--Header-->
-  <header>
-    <a href="/" class="logo">Simply Taxify</a>
-    <ul>
-      <li><a href="/" class="active">Home</a></li>
-      <li><a href="services">Services</a></li>
-      <li><a href="work">Careers</a></li>
-      <li><a href="apply">Apply</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="/admin">Admin</a></li>
-    </ul>
-  </header>
+    <!-- Main Section -->
+    <section class="home" id="home">
+      <img src="static\img\apply-pic.png" id="header-pic" />
+      <h2 id="text" class="typing-effect">Apply Today</h2>
+    </section>
 
-  <!-- Main Section -->
-  <section class="home" id="home">
-    <img src="static\img\apply-pic.png" id="header-pic" />
-    <h2 id="text" class="typing-effect">Apply Today</h2>
-  </section>
+    <!-- Google Translate Element -->
+    <div id="google_translate_element"></div>
 
-  <!-- Google Translate Element -->
-  <div id="google_translate_element"></div>
+    <!--Chatbot Embed-->
+    <div>
+      <script
+        type="module"
+        src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
+      ></script>
+      <zapier-interfaces-chatbot-embed
+        is-popup="true"
+        chatbot-id="clr2gyugf00182g6bm4zixygq"
+        height="700px"
+        width="500px"
+      ></zapier-interfaces-chatbot-embed>
+    </div>
 
-  <!--Chatbot Embed-->
-  <div>
-    <script type="module"
-      src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"></script>
-    <zapier-interfaces-chatbot-embed is-popup="true" chatbot-id="clr2gyugf00182g6bm4zixygq" height="700px"
-      width="500px"></zapier-interfaces-chatbot-embed>
-  </div>
+    <!--Application form-->
+    <div>
+      <h1 class="p-5 text-center" data-aos="zoom-in" data-aos-duration="500">
+        Work With Us
+      </h1>
+      <form
+        action="thank"
+        method="POST"
+        class="p-3 rounded col-md-10 mx-auto"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
 
-  <!--Application form-->
-  <div>
-    <h1 class="p-5 text-center" data-aos="zoom-in" data-aos-duration="500">Work With Us</h1>
-    <form action="thank" method="POST" class="p-3 rounded col-md-10 mx-auto" enctype="multipart/form-data">
-      {% csrf_token %}
-
-      <!-- Job Selection -->
-      <div class="row g-3">
-        <div class="col-md-12">
-          <label for="position" class="form-label">Position: </label>
-          <input name="position" type="text" class="form-control" id="position" required minlength="1" maxlength="50"
-            title="Position must be between 1 and 50 characters long." />
+        <!-- Job Selection -->
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="position" class="form-label">Position Applying: </label>
+            <input
+              name="position"
+              type="text"
+              class="form-control"
+              id="position"
+              required
+              minlength="1"
+              maxlength="50"
+              title="Position must be between 1 and 50 characters long."
+            />
+          </div>
+          <!-- How to Contact -->
+          <div class="col-md-6">
+            <label for="howToContact" class="form-label"
+              >Preferred Method of Contact:</label
+            >
+            <input
+              name="howToContact"
+              type="text"
+              class="form-control"
+              id="howToContact"
+              required
+              minlength="1"
+              maxlength="100"
+              title="Field must be between 1 and 100 characters long."
+            />
+          </div>
         </div>
-      </div>
 
-      <!-- Personal Information -->
-      <div class="row g-3">
-        <div class="col-md-6">
-          <label for="firstName" class="form-label">First Name:</label>
-          <input name="firstName" type="text" class="form-control" id="firstName" required minlength="1" maxlength="50"
-            title="First name must be between 1 and 50 characters long." />
+        <!-- Personal Information -->
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">First Name:</label>
+            <input
+              name="firstName"
+              type="text"
+              class="form-control"
+              id="firstName"
+              required
+              minlength="1"
+              maxlength="50"
+              title="First name must be between 1 and 50 characters long."
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name:</label>
+            <input
+              name="lastName"
+              type="text"
+              class="form-control"
+              id="lastName"
+              required
+              minlength="1"
+              maxlength="50"
+              title="Last name must be between 1 and 50 characters long."
+            />
+          </div>
         </div>
-        <div class="col-md-6">
-          <label for="lastName" class="form-label">Last Name:</label>
-          <input name="lastName" type="text" class="form-control" id="lastName" required minlength="1" maxlength="50"
-            title="Last name must be between 1 and 50 characters long." />
-        </div>
-      </div>
 
-      <div class="row g-3">
-        <div class="col-md-6">
-          <label for="address" class="form-label">Address:</label>
-          <input name="address" type="text" class="form-control" id="address" required minlength="1" maxlength="100"
-            title="Address must be between 1 and 100 characters long." />
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="address" class="form-label">Address:</label>
+            <input
+              name="address"
+              type="text"
+              class="form-control"
+              id="address"
+              required
+              minlength="1"
+              maxlength="100"
+              title="Address must be between 1 and 100 characters long."
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="city" class="form-label">City:</label>
+            <input
+              name="city"
+              type="text"
+              class="form-control"
+              id="city"
+              required
+              minlength="1"
+              maxlength="50"
+              title="City must be between 1 and 50 characters long."
+            />
+          </div>
         </div>
-        <div class="col-md-6">
-          <label for="city" class="form-label">City:</label>
-          <input name="city" type="text" class="form-control" id="city" required minlength="1" maxlength="50"
-            title="City must be between 1 and 50 characters long." />
-        </div>
-      </div>
 
-      <div class="row g-3">
-        <div class="col-md-6">
-          <label for="state" class="form-label">State:</label>
-          <input name="state" type="text" class="form-control" id="state" required minlength="2" maxlength="2"
-            title="State must be a 2-letter code." />
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="state" class="form-label">State:</label>
+            <input
+              name="state"
+              type="text"
+              class="form-control"
+              id="state"
+              required
+              minlength="2"
+              maxlength="2"
+              title="State must be a 2-letter code."
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="zip" class="form-label">Zip/Postal Code:</label>
+            <input
+              name="zip"
+              type="text"
+              class="form-control"
+              id="zip"
+              required
+              pattern="\d{5}(-\d{4})?"
+              title="Zip code must be in the format 12345 or 12345-6789."
+            />
+          </div>
         </div>
-        <div class="col-md-6">
-          <label for="zip" class="form-label">Zip/Postal Code:</label>
-          <input name="zip" type="text" class="form-control" id="zip" required pattern="\d{5}(-\d{4})?"
-            title="Zip code must be in the format 12345 or 12345-6789." />
-        </div>
-      </div>
 
-      <div class="row g-3">
-        <div class="col-md-6">
-          <label for="phone" class="form-label">Contact Phone:</label>
-          <input name="phone" type="tel" class="form-control" id="phone" required pattern="\d{10}"
-            title="Please enter a 10-digit phone number." />
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="phone" class="form-label">Contact Phone:</label>
+            <input
+              name="phone"
+              type="tel"
+              class="form-control"
+              id="phone"
+              required
+              pattern="\d{10}"
+              title="Please enter a 10-digit phone number."
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email Address:</label>
+            <input
+              name="email"
+              type="email"
+              class="form-control"
+              id="email"
+              required
+              title="Please enter a valid email address."
+            />
+          </div>
         </div>
-        <div class="col-md-6">
-          <label for="email" class="form-label">Email Address:</label>
-          <input name="email" type="email" class="form-control" id="email" required
-            title="Please enter a valid email address." />
-        </div>
-      </div>
 
-      <!-- References -->
-      <div class="row g-3">
-        <div class="col-md-6">
-          <label for="reference1Name" class="form-label">Reference 1 Name:</label>
-          <input name="reference1Name" type="text" class="form-control" id="reference1Name" required minlength="1"
-            maxlength="50" title="Reference name must be between 1 and 50 characters long." />
+        <!-- Reason for Applying -->
+        <div class="row g-3">
+          <div class="col-md-12">
+            <label for="reasonForApplying" class="form-label"
+              >Briefly Explain Why You Would Like to Join Our Team:</label
+            >
+            <textarea
+              name="reasonForApplying"
+              class="form-control"
+              id="reasonForApplying"
+              rows="4"
+              required
+              minlength="10"
+              maxlength="1000"
+              title="Please provide a reason for applying between 10 and 1000 characters."
+            ></textarea>
+          </div>
         </div>
-        <div class="col-md-6">
-          <label for="reference1Relationship" class="form-label">Reference 1 Relationship:</label>
-          <input name="reference1Relationship" type="text" class="form-control" id="reference1Relationship" required
-            minlength="1" maxlength="50" title="Relationship must be between 1 and 50 characters long." />
-        </div>
-      </div>
 
-      <div class="row g-3">
-        <div class="col-md-6">
-          <label for="reference1Phone" class="form-label">Reference 1 Phone Number:</label>
-          <input name="reference1Phone" type="tel" class="form-control" id="reference1Phone" required pattern="\d{10}"
-            title="Please enter a 10-digit phone number." />
-        </div>
-      </div>
-
-      <div class="row g-3">
-        <div class="col-md-6">
-          <label for="reference2Name" class="form-label">Reference 2 Name:</label>
-          <input name="reference2Name" type="text" class="form-control" id="reference2Name" required minlength="1"
-            maxlength="50" title="Reference name must be between 1 and 50 characters long." />
-        </div>
-        <div class="col-md-6">
-          <label for="reference2Relationship" class="form-label">Reference 2 Relationship:</label>
-          <input name="reference2Relationship" type="text" class="form-control" id="reference2Relationship" required
-            minlength="1" maxlength="50" title="Relationship must be between 1 and 50 characters long." />
-        </div>
-      </div>
-
-      <div class="row g-3">
-        <div class="col-md-6">
-          <label for="reference2Phone" class="form-label">Reference 2 Phone Number:</label>
-          <input name="reference2Phone" type="tel" class="form-control" id="reference2Phone" required pattern="\d{10}"
-            title="Please enter a 10-digit phone number." />
-        </div>
-      </div>
-
-      <!-- Reason for Applying -->
-      <div class="row g-3">
-        <div class="col-md-12">
-          <label for="reasonForApplying" class="form-label">Why Simply Taxify:</label>
-          <textarea name="reasonForApplying" class="form-control" id="reasonForApplying" rows="4" required
-            minlength="10" maxlength="1000"
-            title="Please provide a reason for applying between 10 and 1000 characters."></textarea>
-        </div>
-      </div>
-
-      <section>
         <!-- Tax Knowledge -->
-        <h2 class="p-5 text-center" data-aos="zoom-in" data-aos-duration="500">Tax Knowledge</h2>
+        <h2 class="p-5 text-center" data-aos="zoom-in" data-aos-duration="500">
+          Tax Knowledge
+        </h2>
 
         <div class="row g-3">
           <div class="col-md-6">
-            <label for="years" class="form-label">Years of Tax Preparation Experience:</label>
-            <input name="years" type="number" class="form-control" id="years" required
-              min="0" max="50" title="Please enter a number between 0 and 50." />
+            <label for="years" class="form-label"
+              >Years of Tax Preparation Experience:</label
+            >
+            <input
+              name="years"
+              type="number"
+              class="form-control"
+              id="years"
+              required
+              min="0"
+              max="50"
+              title="Please enter a number between 0 and 50."
+            />
           </div>
           <div class="col-md-6">
-            <label for="taxSoftware" class="form-label">Tax Software Experience:</label>
-            <input name="taxSoftware" type="text" class="form-control" id="taxSoftware" minlength="1" maxlength="50"
-              title="Tax software experience must be between 1 and 50 characters long." />
+            <label for="taxSoftware" class="form-label"
+              >Tax Software Experience:</label
+            >
+            <input
+              name="taxSoftware"
+              type="text"
+              class="form-control"
+              id="taxSoftware"
+              minlength="1"
+              maxlength="50"
+              title="Tax software experience must be between 1 and 50 characters long."
+            />
           </div>
         </div>
 
         <div class="row g-3">
           <div class="col-md-6">
-            <label for="certifications" class="form-label">Tax Certifications:</label>
-            <input name="certifications" type="text" class="form-control" id="certifications" minlength="1"
-              maxlength="100" title="Certifications must be between 1 and 100 characters long." />
+            <label for="certifications" class="form-label"
+              >Tax Certifications:</label
+            >
+            <input
+              name="certifications"
+              type="text"
+              class="form-control"
+              id="certifications"
+              minlength="1"
+              maxlength="100"
+              title="Certifications must be between 1 and 100 characters long."
+            />
           </div>
           <div class="col-md-6">
-            <label for="availability" class="form-label">Availability during Tax Season:</label>
-            <input name="availability" type="text" class="form-control" id="availability" required minlength="1"
-              maxlength="100" title="Availability must be between 1 and 100 characters long." />
+            <label for="availability" class="form-label"
+              >Availability during Tax Season:</label
+            >
+            <input
+              name="availability"
+              type="text"
+              class="form-control"
+              id="availability"
+              required
+              minlength="1"
+              maxlength="100"
+              title="Availability must be between 1 and 100 characters long."
+            />
           </div>
         </div>
 
         <div class="row g-3">
           <div class="col-md-12">
-            <label for="taxKnowledge" class="form-label">Please Describe Your Tax Knowledge and Any Other Relevant
-              Experience:</label>
-            <textarea name="taxKnowledge" class="form-control" id="taxKnowledge" rows="4" required minlength="10"
-              maxlength="1000" title="Please describe your tax knowledge between 10 and 1000 characters."></textarea>
+            <label for="taxKnowledge" class="form-label"
+              >Please Describe Your Tax Knowledge and Any Other Relevant
+              Experience:</label
+            >
+            <textarea
+              name="taxKnowledge"
+              class="form-control"
+              id="taxKnowledge"
+              rows="4"
+              required
+              minlength="10"
+              maxlength="1000"
+              title="Please describe your tax knowledge between 10 and 1000 characters."
+            ></textarea>
           </div>
         </div>
 
         <!-- Recent Employment -->
-        <h2 class="p-5 text-center" data-aos="zoom-in" data-aos-duration="500">Recent Employment</h2>
+        <h2 class="p-5 text-center" data-aos="zoom-in" data-aos-duration="500">
+          Recent Employment
+        </h2>
         <div class="row g-3">
           <div class="col-md-6">
             <label for="recentStartDate" class="form-label">Start Date:</label>
-            <input name="recentStartDate" type="date" class="form-control" id="recentStartDate" required
-              title="Please enter a valid start date." />
+            <input
+              name="recentStartDate"
+              type="date"
+              class="form-control"
+              id="recentStartDate"
+              required
+              title="Please enter a valid start date."
+            />
           </div>
           <div class="col-md-6">
             <label for="recentEndDate" class="form-label">End Date:</label>
-            <input name="recentEndDate" type="date" class="form-control" id="recentEndDate" required
-              title="Please enter a valid end date." />
+            <input
+              name="recentEndDate"
+              type="date"
+              class="form-control"
+              id="recentEndDate"
+              required
+              title="Please enter a valid end date."
+            />
           </div>
         </div>
 
         <div class="row g-3">
           <div class="col-md-6">
             <label for="recentJobTitle" class="form-label">Job Title:</label>
-            <input name="recentJobTitle" type="text" class="form-control" id="recentJobTitle" required minlength="1"
-              maxlength="100" title="Job title must be between 1 and 100 characters long." />
+            <input
+              name="recentJobTitle"
+              type="text"
+              class="form-control"
+              id="recentJobTitle"
+              required
+              minlength="1"
+              maxlength="100"
+              title="Job title must be between 1 and 100 characters long."
+            />
           </div>
           <div class="col-md-6">
             <label for="recentCompany" class="form-label">Company:</label>
-            <input name="recentCompany" type="text" class="form-control" id="recentCompany" required minlength="1"
-              maxlength="100" title="Company name must be between 1 and 100 characters long." />
+            <input
+              name="recentCompany"
+              type="text"
+              class="form-control"
+              id="recentCompany"
+              required
+              minlength="1"
+              maxlength="100"
+              title="Company name must be between 1 and 100 characters long."
+            />
           </div>
         </div>
 
         <div class="row g-3">
           <div class="col-md-6">
             <label for="recentCity" class="form-label">City:</label>
-            <input name="recentCity" type="text" class="form-control" id="recentCity" required minlength="1"
-              maxlength="50" title="City must be between 1 and 50 characters long." />
+            <input
+              name="recentCity"
+              type="text"
+              class="form-control"
+              id="recentCity"
+              required
+              minlength="1"
+              maxlength="50"
+              title="City must be between 1 and 50 characters long."
+            />
           </div>
           <div class="col-md-6">
             <label for="recentState" class="form-label">State:</label>
-            <input name="recentState" type="text" class="form-control" id="recentState" required minlength="2"
-              maxlength="2" title="State must be a 2-letter code." />
+            <input
+              name="recentState"
+              type="text"
+              class="form-control"
+              id="recentState"
+              required
+              minlength="2"
+              maxlength="2"
+              title="State must be a 2-letter code."
+            />
           </div>
         </div>
 
         <div class="row g-3">
           <div class="col-md-12">
-            <label for="recentReasonForLeaving" class="form-label">Reason For Leaving:</label>
-            <input name="recentReasonForLeaving" type="text" class="form-control" id="recentReasonForLeaving" required
-              minlength="1" maxlength="100" title="Reason for leaving must be between 1 and 100 characters long." />
+            <label for="recentReasonForLeaving" class="form-label"
+              >Reason For Leaving:</label
+            >
+            <input
+              name="recentReasonForLeaving"
+              type="text"
+              class="form-control"
+              id="recentReasonForLeaving"
+              required
+              minlength="1"
+              maxlength="100"
+              title="Reason for leaving must be between 1 and 100 characters long."
+            />
           </div>
         </div>
 
         <div class="row g-3">
           <div class="col-md-12">
-            <label for="recentJobDescription" class="form-label">Job Description:</label>
-            <textarea name="recentJobDescription" class="form-control" id="recentJobDescription" rows="4" required
-              minlength="10" maxlength="1000"
-              title="Job description must be between 10 and 1000 characters long."></textarea>
+            <label for="recentJobDescription" class="form-label"
+              >Job Description:</label
+            >
+            <textarea
+              name="recentJobDescription"
+              class="form-control"
+              id="recentJobDescription"
+              rows="4"
+              required
+              minlength="10"
+              maxlength="1000"
+              title="Job description must be between 10 and 1000 characters long."
+            ></textarea>
           </div>
         </div>
 
@@ -269,8 +452,14 @@
         <div class="row g-3">
           <div class="col-md-12">
             <label for="extraInfo" class="form-label">Additional Info:</label>
-            <textarea name="extraInfo" class="form-control" id="extraInfo" rows="4" maxlength="1000"
-              title="Additional info must be between 10 and 1000 characters long."></textarea>
+            <textarea
+              name="extraInfo"
+              class="form-control"
+              id="extraInfo"
+              rows="4"
+              maxlength="1000"
+              title="Additional info must be between 10 and 1000 characters long."
+            ></textarea>
           </div>
         </div>
 
@@ -280,11 +469,17 @@
             <button type="submit" class="custom-button ml-3">
               Submit Application
             </button>
-            <button type="button" class="custom-button mb-5" data-bs-toggle="collapse" data-bs-target="#calendar">
+            <button
+              type="button"
+              class="custom-button mb-5"
+              data-bs-toggle="collapse"
+              data-bs-target="#calendar"
+            >
               Book an Interview
             </button>
             <div id="calendar" class="collapse">
-              <div style="
+              <div
+                style="
                   position: relative;
                   padding-bottom: 56.25%;
                   height: 0;
@@ -293,7 +488,8 @@
                   background-color: white;
                   border: 1px solid #777;
                   border-radius: 15px;
-                ">
+                "
+              >
                 <iframe
                   src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ04oMH_t5RC-2BhBvK_JehupAAzbHKC5Jhy-edRFoBVPJhV7lbGlETOXphn_aC6SgyCbM2XlqIN"
                   style="
@@ -303,87 +499,110 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
-                  " frameborder="0" scrolling="no"></iframe>
+                  "
+                  frameborder="0"
+                  scrolling="no"
+                ></iframe>
               </div>
             </div>
           </div>
         </div>
-    </form>
-  </div>
-  <!--Import javascript dependecies-->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="static/js/index.js"></script>
+      </form>
+    </div>
+    <!--Import javascript dependecies-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="static/js/index.js"></script>
 
-  <!-- Google Translate script -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        { pageLanguage: "en" },
-        "google_translate_element"
-      );
-    }
-  </script>
-  <script type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
+    <!-- Google Translate script -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
 
-<!--Footer-->
-<footer class="contact bg-light py-5" id="contact">
-  <div class="container">
-    <div class="row">
-      <!-- Contact Information -->
-      <div class="col-md-6 text-center">
-        <h2 class="mb-4">Contact Information</h2>
-        <div class="row mb-4">
-          <div class="col-md-4">
-            <h4>Email</h4>
-            <p>info@simplytaxify.com</p>
+  <!--Footer-->
+  <footer class="contact bg-light py-5" id="contact">
+    <div class="container">
+      <div class="row">
+        <!-- Contact Information -->
+        <div class="col-md-6 text-center">
+          <h2 class="mb-4">Contact Information</h2>
+          <div class="row mb-4">
+            <div class="col-md-4">
+              <h4>Email</h4>
+              <p>info@simplytaxify.com</p>
+            </div>
+            <div class="col-md-4">
+              <h4>Phone</h4>
+              <p>(309) 205-2282</p>
+            </div>
+            <div class="col-md-4">
+              <h4>Address</h4>
+              <p>1110 Lockenvitz Ln, Bloomington, IL 61704</p>
+            </div>
           </div>
-          <div class="col-md-4">
-            <h4>Phone</h4>
-            <p>(309) 205-2282</p>
-          </div>
-          <div class="col-md-4">
-            <h4>Address</h4>
-            <p>1110 Lockenvitz Ln, Bloomington, IL 61704</p>
+
+          <!-- Newsletter Signup -->
+          <div class="row">
+            <div class="col text-center">
+              <h4 class="mb-4">Subscribe to our Newsletter</h4>
+              <form class="d-flex justify-content-center">
+                <input
+                  type="email"
+                  class="form-control w-75"
+                  placeholder="Enter your email"
+                />
+                <button type="submit" class="btn custom-button ms-2">
+                  Subscribe
+                </button>
+              </form>
+            </div>
           </div>
         </div>
 
-        <!-- Newsletter Signup -->
-        <div class="row">
-          <div class="col text-center">
-            <h4 class="mb-4">Subscribe to our Newsletter</h4>
-            <form class="d-flex justify-content-center">
-              <input type="email" class="form-control w-75" placeholder="Enter your email">
-              <button type="submit" class="btn custom-button ms-2">
-                Subscribe
-              </button>
-            </form>
+        <!-- Map -->
+        <div class="col-md-6 text-center">
+          <h2 class="mb-4">Location</h2>
+          <div style="width: 100%">
+            <iframe
+              width="650"
+              height="250"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              style="border-radius: 15px;"
+              src="https://maps.google.com/maps?width=720&amp;height=400&amp;hl=en&amp;q=1110%20Lockenvitz%20Ln,%20Bloomington,%20IL%2061704+(Simply%20Taxify)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ><a href="https://www.gps.ie/">gps systems</a></iframe
+            >
           </div>
         </div>
       </div>
 
-      <!-- Map -->
-      <div class="col-md-6 text-center">
-        <h2 class="mb-4">Location</h2>
-        <div style="width: 100%"><iframe width="650" height="250" frameborder="0" scrolling="no" marginheight="0"
-            marginwidth="0"
-            src="https://maps.google.com/maps?width=720&amp;height=400&amp;hl=en&amp;q=1110%20Lockenvitz%20Ln,%20Bloomington,%20IL%2061704+(Simply%20Taxify)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
-              href="https://www.gps.ie/">gps systems</a></iframe></div>
+      <!-- Social Media Icons -->
+      <div class="row mt-5">
+        <div class="col text-center">
+          <a
+            href="https://www.facebook.com/SimplyTaxify"
+            target="_blank"
+            class="me-3"
+            ><i class="fab fa-facebook fa-2x"></i
+          ></a>
+          <a href="https://www.instagram.com/simply_taxify/" target="_blank"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+        </div>
       </div>
     </div>
-
-    <!-- Social Media Icons -->
-    <div class="row mt-5">
-      <div class="col text-center">
-        <a href="https://www.facebook.com/SimplyTaxify" target="_blank" class="me-3"><i
-            class="fab fa-facebook fa-2x"></i></a>
-        <a href="https://www.instagram.com/simply_taxify/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-      </div>
-    </div>
-  </div>
-</footer>
-
+  </footer>
 </html>
