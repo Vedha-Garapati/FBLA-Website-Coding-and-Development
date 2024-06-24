@@ -1,397 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Set up page and import all stylesheet dependencies -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <!-- Set up page and import all stylesheet dependencies -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simply Taxify</title>
 
-  <title>Simply Taxify</title>
+    <link rel="icon" href="static/img/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="static/css/styles.css" />
 
-  <link rel="icon" href="static/img/logo.png" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="static/css/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="#" class="logo">Simply Taxify</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="services">Services</a></li>
+        <li><a href="work">Careers</a></li>
+        <li><a href="apply">Apply</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/admin">Admin</a></li>
+      </ul>
+    </header>
 
-<body>
-  <!-- Header -->
-  <header>
-    <a href="#" class="logo">Simply Taxify</a>
-    <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="services">Services</a></li>
-      <li><a href="work">Careers</a></li>
-      <li><a href="apply">Apply</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="/admin">Admin</a></li>
-    </ul>
-  </header>
+    <!-- Main Section -->
+    <section class="home" id="home">
+      <img src="static/img/tax-header.png" id="header-pic" />
+      <h2 id="text" class="typing-effect">Your One Stop Tax Destination</h2>
+    </section>
 
-  <!-- Main Section -->
-  <section class="home" id="home">
-    <img src="static/img/tax-header.png" id="header-pic" />
-    <h2 id="text" class="typing-effect">Your One Stop Tax Destination</h2>
-  </section>
+    <!-- Google Translate Element -->
+    <div id="google_translate_element"></div>
 
-  <!-- Google Translate Element -->
-  <div id="google_translate_element"></div>
-
-  <!-- Chatbot Embed -->
-  <div>
-    <script type="module"
-      src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"></script>
-    <zapier-interfaces-chatbot-embed is-popup="true" chatbot-id="clr2gyugf00182g6bm4zixygq" height="700px"
-      width="500px"></zapier-interfaces-chatbot-embed>
-  </div>
-
-  <!-- About Us Section -->
-  <section id="about" class="py-5" style="background-color: #f8f9fa">
-    <div class="container">
-      <h2 class="text-center mb-5" data-aos="fade-up" data-aos-duration="500">
-        About Us
-      </h2>
-      <div class="row">
-        <div class="col-md-6" data-aos="fade-right" data-aos-duration="500">
-          <p>
-            Simply Taxify is a local family-operated business with a rich
-            history spanning over 30 years. Founded with the mission to offer
-            professional tax services at an affordable rate, we have been
-            serving individuals and businesses in our community with integrity
-            and dedication. Our team consists of experienced tax professionals
-            committed to providing personalized and reliable services to meet
-            our clients' unique needs. We understand the importance of
-            accurate and timely tax preparation, and we strive to ensure that
-            our clients receive the maximum refund or minimize their tax
-            liabilities. At Simply Taxify, we pride ourselves on our
-            commitment to excellence, integrity, and customer satisfaction.
-            Whether you're an individual taxpayer or a small business owner,
-            you can trust us to handle your tax matters with expertise and
-            professionalism. We are passionate about helping our clients
-            achieve their financial goals and navigate the complexities of the
-            tax landscape. With our comprehensive knowledge and personalized
-            approach, we aim to build long-lasting relationships with our
-            clients and be their trusted partner in all their tax-related
-            matters.
-          </p>
-        </div>
-        <div class="col-md-6" data-aos="fade-left" data-aos-duration="500">
-          <img src="static\img\about-us.png" class="img-fluid rounded about-img" alt="About Us" />
-        </div>
-      </div>
+    <!-- Chatbot Embed -->
+    <div>
+      <script
+        type="module"
+        src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
+      ></script>
+      <zapier-interfaces-chatbot-embed
+        is-popup="true"
+        chatbot-id="clr2gyugf00182g6bm4zixygq"
+        height="700px"
+        width="500px"
+      ></zapier-interfaces-chatbot-embed>
     </div>
-  </section>
 
-  <!-- Our Mission Section -->
-  <section id="mission" class="py-5" style="background-color: #d1ecf1">
-    <div class="container">
-      <h2 class="text-center mb-5" data-aos="flip-up" data-aos-duration="500">
-        Our Mission
-      </h2>
-      <p class="text-center" data-aos="flip-down" data-aos-duration="500">
-        Our mission is to offer professional tax services at an affordable
-        rate. We strive to ensure that every client receives personalized
-        attention and expert advice tailored to their unique financial
-        situation. Our goal is to make tax preparation as seamless and
-        stress-free as possible, so you can focus on what matters most to you.
-      </p>
-    </div>
-  </section>
-
-  <!-- Meet Our Team Section -->
-  <section id="team" class="py-5" style="background-color: #198754">
-    <div class="container">
-      <h2 class="text-center text-white mb-5" data-aos="zoom-in" data-aos-duration="500">
-        Meet Our Team
-      </h2>
-      <div class="row">
-        <!-- Team Member 1 -->
-        <div class="col-md-4" data-aos="zoom-in-right" data-aos-duration="500">
-          <div class="card">
-            <img src="static\img\saaki-b.png" class="card-img-top" alt="Saaketh Bhojanam" />
-            <div class="card-body">
-              <h5 class="card-title">Ronald Ward</h5>
-              <p class="card-text">Tax Advisor</p>
-            </div>
+    <!-- About Us Section -->
+    <section id="about" class="py-5" style="background-color: #f8f9fa">
+      <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up" data-aos-duration="500">
+          About Us
+        </h2>
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-right" data-aos-duration="500">
+            <p>
+              Simply Taxify is a local family-operated business with a rich
+              history spanning over 30 years. Founded with the mission to offer
+              professional tax services at an affordable rate, we have been
+              serving individuals and businesses in our community with integrity
+              and dedication. Our team consists of experienced tax professionals
+              committed to providing personalized and reliable services to meet
+              our clients' unique needs. We understand the importance of
+              accurate and timely tax preparation, and we strive to ensure that
+              our clients receive the maximum refund or minimize their tax
+              liabilities. At Simply Taxify, we pride ourselves on our
+              commitment to excellence, integrity, and customer satisfaction.
+              Whether you're an individual taxpayer or a small business owner,
+              you can trust us to handle your tax matters with expertise and
+              professionalism. We are passionate about helping our clients
+              achieve their financial goals and navigate the complexities of the
+              tax landscape. With our comprehensive knowledge and personalized
+              approach, we aim to build long-lasting relationships with our
+              clients and be their trusted partner in all their tax-related
+              matters.
+            </p>
           </div>
-        </div>
-        <!-- Team Member 2 -->
-        <div class="col-md-4" data-aos="zoom-in-down" data-aos-duration="500">
-          <div class="card">
-            <img src="static\img\vedha-g.png" class="card-img-top" alt="Vedha Garapati" />
-            <div class="card-body">
-              <h5 class="card-title">Emanuel Graham</h5>
-              <p class="card-text">Financial Expert</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="zoom-in-left" data-aos-duration="500">
-          <div class="card">
-            <img src="static\img\emily-h.png" class="card-img-top" alt="Emily Hutchinson" />
-            <div class="card-body">
-              <h5 class="card-title">Emily Hutchinson</h5>
-              <p class="card-text">Tax Specialist</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="zoom-out-right" data-aos-duration="500">
-          <div class="card">
-            <img src="static\img\ramesh-s.png" class="card-img-top" alt="Ramesh Singh" />
-            <div class="card-body">
-              <h5 class="card-title">Ramesh Singh</h5>
-              <p class="card-text">Financial Advisor</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="zoom-out" data-aos-duration="500">
-          <div class="card">
-            <img src="static\img\martha-k.png" class="card-img-top" alt="Martha Kale" />
-            <div class="card-body">
-              <h5 class="card-title">Martha Kale</h5>
-              <p class="card-text">Account Manager</p>
-            </div>
-          </div>
-        </div>
-        <!-- Owner -->
-        <div class="col-md-4" data-aos="zoom-out-left" data-aos-duration="500">
-          <div class="card">
-            <img src="static\img\owner-pic.png" class="card-img-top" alt="Owner" />
-            <div class="card-body">
-              <h5 class="card-title">Alex Martin</h5>
-              <p class="card-text">Owner</p>
-            </div>
+          <div class="col-md-6" data-aos="fade-left" data-aos-duration="500">
+            <img
+              src="static\img\about-us.png"
+              class="img-fluid rounded about-img"
+              alt="About Us"
+            />
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials" style="background: linear-gradient(#198754, #5fe798)">
-    <div class="container">
-      <h2 class="text-center text-white mb-5" data-aos="flip-up" data-aos-duration="500">
-        Testimonials
-      </h2>
-      <div id="testimonialCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="testimonial-item text-center">
-              <p class="testimonial-text">
-                "Simply Taxify provided me with excellent tax services. Their
-                expertise and professionalism made the process seamless and
-                stress-free. Highly recommended!"
-              </p>
-              <p class="testimonial-author">- Claudia Moon</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testimonial-item text-center">
-              <p class="testimonial-text">
-                "I have been a client of Simply Taxify for many years, and I
-                continue to be impressed by their dedication and attention to
-                detail. Thank you for your outstanding service!"
-              </p>
-              <p class="testimonial-author">- Ralph Berg</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testimonial-item text-center">
-              <p class="testimonial-text">
-                "The team at Simply Taxify went above and beyond to help me
-                with my tax needs. Their personalized approach and expert
-                advice were invaluable. I highly recommend their services!"
-              </p>
-              <p class="testimonial-author">- Nate Haney</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testimonial-item text-center">
-              <p class="testimonial-text">
-                "I am extremely satisfied with the tax services provided by
-                Simply Taxify. They were professional, efficient, and helped
-                me maximize my tax return. I will definitely be returning next
-                year!"
-              </p>
-              <p class="testimonial-author">- Eleanor North</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testimonial-item text-center">
-              <p class="testimonial-text">
-                "Simply Taxify exceeded my expectations with their exceptional
-                service. Their team was knowledgeable, friendly, and made the
-                tax process simple and stress-free. Thank you!"
-              </p>
-              <p class="testimonial-author">- Omar Jenkins</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+    <!-- Our Mission Section -->
+    <section id="mission" class="py-5" style="background-color: #d1ecf1">
+      <div class="container">
+        <h2 class="text-center mb-5" data-aos="flip-up" data-aos-duration="500">
+          Our Mission
+        </h2>
+        <p class="text-center" data-aos="flip-down" data-aos-duration="500">
+          Our mission is to offer professional tax services at an affordable
+          rate. We strive to ensure that every client receives personalized
+          attention and expert advice tailored to their financial situation. Our
+          goal is to make tax preparation as seamless and stress-free as
+          possible, so you can focus on what matters most to you.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Resources Section -->
-  <section id="resources" class="py-5" style="background-color: #f8f9fa">
-    <div class="container">
-      <h2 class="text-center mb-5" data-aos="fade-in-up" data-aos-duration="500">
-        Resources
-      </h2>
-      <div class="row">
-        <div class="col-md-4" data-aos="zoom-in-right" data-aos-duration="500">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Tax Preparation Checklist</h5>
-              <p class="card-text">
-                A comprehensive list of documents and information you'll need
-                to prepare your taxes.
-              </p>
-              <a href="static\img\TaxPrepChecklist.pdf" download="Tax Preparation Checklist"
-                class="btn custom-button">Download PDF</a>
+    <!-- Meet Our Team Section -->
+    <section id="team" class="py-5" style="background-color: #198754">
+      <div class="container">
+        <h2
+          class="text-center text-white mb-5"
+          data-aos="zoom-in"
+          data-aos-duration="500"
+        >
+          Meet Our Team
+        </h2>
+        <div class="row">
+          <!-- Team Member 1 -->
+          <div
+            class="col-md-4"
+            data-aos="zoom-in-right"
+            data-aos-duration="500"
+          >
+            <div class="card">
+              <img
+                src="static\img\saaki-b.png"
+                class="card-img-top"
+                alt="Ronald Ward"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ronald Ward (CPA)</h5>
+                <p class="card-text">Tax Advisor</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4" data-aos="zoom-in-down" data-aos-duration="500">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Tax Filing Deadlines</h5>
-              <p class="card-text">
-                Stay on top of important tax filing deadlines to avoid
-                penalties and interest.
-              </p>
-              <a href="https://www.irs.gov/filing/individuals/when-to-file" target="_blank"
-                class="btn custom-button">Learn More</a>
+          <!-- Team Member 2 -->
+          <div class="col-md-4" data-aos="zoom-in-down" data-aos-duration="500">
+            <div class="card">
+              <img
+                src="static\img\vedha-g.png"
+                class="card-img-top"
+                alt="Emanuel Graham"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Emanuel Graham (EA)</h5>
+                <p class="card-text">Financial Expert</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4" data-aos="zoom-in-left" data-aos-duration="500">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Tax Tips and Advice</h5>
-              <p class="card-text">
-                Expert tax tips and advice to help you maximize your
-                deductions and credits.
-              </p>
-              <a href="https://www.irs.gov/newsroom/irs-tax-tips" target="_blank" class="btn custom-button">Read
-                More</a>
+          <div class="col-md-4" data-aos="zoom-in-left" data-aos-duration="500">
+            <div class="card">
+              <img
+                src="static\img\emily-h.png"
+                class="card-img-top"
+                alt="Emily Hutchinson"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Emily Hutchinson (CPA & CMA)</h5>
+                <p class="card-text">Tax Specialist</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4"
+            data-aos="zoom-out-right"
+            data-aos-duration="500"
+          >
+            <div class="card">
+              <img
+                src="static\img\ramesh-s.png"
+                class="card-img-top"
+                alt="Ramesh Singh"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ramesh Singh (CFA, EA, CFP)</h5>
+                <p class="card-text">Financial Advisor</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="zoom-out" data-aos-duration="500">
+            <div class="card">
+              <img
+                src="static\img\martha-k.png"
+                class="card-img-top"
+                alt="Martha Kale"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Martha Kale (EA & CMA)</h5>
+                <p class="card-text">Account Manager</p>
+              </div>
+            </div>
+          </div>
+          <!-- Owner -->
+          <div
+            class="col-md-4"
+            data-aos="zoom-out-left"
+            data-aos-duration="500"
+          >
+            <div class="card">
+              <img
+                src="static\img\owner-pic.png"
+                class="card-img-top"
+                alt="Owner"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Alex Martin (ChFC)</h5>
+                <p class="card-text">Owner</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Certifications Section -->
-  <section id="certifications" class="py-5" style="background-color: #d1ecf1">
-    <div class="container">
-      <h2 class="text-center mb-5" data-aos="fade-in-down" data-aos-duration="750">
-        Our Certifications
-      </h2>
-      <div class="row text-center">
-        <div class="col-md-3" data-aos="zoom-in-right" data-aos-duration="500">
-          <i class="fas fa-certificate fa-3x mb-3"></i>
-          <h5>Certified Public Accountant (CPA)</h5>
-        </div>
-        <div class="col-md-3" data-aos="zoom-in-right" data-aos-duration="500">
-          <i class="fas fa-certificate fa-3x mb-3"></i>
-          <h5>Enrolled Agent (EA)</h5>
-        </div>
-        <div class="col-md-3" data-aos="zoom-in-left" data-aos-duration="500">
-          <i class="fas fa-certificate fa-3x mb-3"></i>
-          <h5>Chartered Financial Analyst (CFA)</h5>
-        </div>
-        <div class="col-md-3" data-aos="zoom-in-left" data-aos-duration="500">
-          <i class="fas fa-certificate fa-3x mb-3"></i>
-          <h5>Certified Management Accountant (CMA)</h5>
+    <!-- Testimonials Section -->
+    <section
+      class="testimonials"
+      style="background: linear-gradient(#198754, #5fe798)"
+    >
+      <div class="container">
+        <h2
+          class="text-center text-white mb-5"
+          data-aos="flip-up"
+          data-aos-duration="500"
+        >
+          Testimonials
+        </h2>
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial-item text-center">
+                <p class="testimonial-text">
+                  "Simply Taxify provided me with excellent tax services. Their
+                  expertise and professionalism made the process seamless and
+                  stress-free. Highly recommended!"
+                </p>
+                <p class="testimonial-author">- Claudia Moon</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-item text-center">
+                <p class="testimonial-text">
+                  "I have been a client of Simply Taxify for many years, and I
+                  continue to be impressed by their dedication and attention to
+                  detail. Thank you for your outstanding service!"
+                </p>
+                <p class="testimonial-author">- Ralph Berg</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-item text-center">
+                <p class="testimonial-text">
+                  "The team at Simply Taxify went above and beyond to help me
+                  with my tax needs. Their personalized approach and expert
+                  advice were invaluable."
+                </p>
+                <p class="testimonial-author">- Nate Haney</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-item text-center">
+                <p class="testimonial-text">
+                  "I am extremely satisfied with the tax services provided by
+                  Simply Taxify. They were professional, efficient, and helped
+                  me maximize my tax return."
+                </p>
+                <p class="testimonial-author">- Eleanor North</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-item text-center">
+                <p class="testimonial-text">
+                  "Simply Taxify exceeded my expectations with their exceptional
+                  service. Their team was knowledgeable, friendly, and made the
+                  tax simple and stress-free!"
+                </p>
+                <p class="testimonial-author">- Omar Jenkins</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev custom-carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next custom-carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="contact bg-light py-5" id="contact">
-    <div class="container">
-      <div class="row">
-        <!-- Contact Information -->
-        <div class="col-md-6 text-center">
-          <h2 class="mb-4">Contact Information</h2>
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <h4>Email</h4>
-              <p>info@simplytaxify.com</p>
+    <!-- Resources Section -->
+    <section id="resources" class="py-5" style="background-color: #d1ecf1">
+      <div class="container">
+        <h2
+          class="text-center mb-5"
+          data-aos="fade-in-up"
+          data-aos-duration="500"
+        >
+          Resources
+        </h2>
+        <div class="row">
+          <div
+            class="col-md-4"
+            data-aos="zoom-in-right"
+            data-aos-duration="500"
+          >
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tax Preparation Checklist</h5>
+                <p class="card-text">
+                  A comprehensive list of documents and information you'll need
+                  to prepare your taxes.
+                </p>
+                <a
+                  href="static\img\TaxPrepChecklist.pdf"
+                  download="Tax Preparation Checklist"
+                  class="btn custom-button"
+                  >Download PDF</a
+                >
+              </div>
             </div>
-            <div class="col-md-4">
-              <h4>Phone</h4>
-              <p>(309) 205-2282</p>
+          </div>
+          <div class="col-md-4" data-aos="zoom-in-down" data-aos-duration="500">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tax Filing Deadlines</h5>
+                <p class="card-text">
+                  Stay on top of important tax filing deadlines to avoid
+                  penalties and interest.
+                </p>
+                <a
+                  href="https://www.irs.gov/filing/individuals/when-to-file"
+                  target="_blank"
+                  class="btn custom-button"
+                  >Learn More</a
+                >
+              </div>
             </div>
-            <div class="col-md-4">
-              <h4>Address</h4>
-              <p>1110 Lockenvitz Ln, Bloomington, IL 61704</p>
+          </div>
+          <div class="col-md-4" data-aos="zoom-in-left" data-aos-duration="500">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tax Tips and Advice</h5>
+                <p class="card-text">
+                  Expert tax tips and advice to help you maximize your
+                  deductions and credits.
+                </p>
+                <a
+                  href="https://www.irs.gov/newsroom/irs-tax-tips"
+                  target="_blank"
+                  class="btn custom-button"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="contact bg-light py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          <!-- Contact Information -->
+          <div class="col-md-6 text-center">
+            <h2 class="mb-4">Contact Information</h2>
+            <div class="row mb-4">
+              <div class="col-md-4">
+                <h4>Email</h4>
+                <p>info <br> @simplytaxify.com</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Phone</h4>
+                <p>(309) 205-2282</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Address</h4>
+                <p>1110 Lockenvitz Ln, Bloomington, IL 61704</p>
+              </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="row">
+              <div class="col text-center">
+                <h4 class="mb-4">Subscribe to our Newsletter</h4>
+                <form class="d-flex justify-content-center">
+                  <input
+                    type="email"
+                    class="form-control w-75"
+                    placeholder="Enter your email"
+                  />
+                  <button type="submit" class="btn custom-button ms-2">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
 
-          <!-- Newsletter Signup -->
-          <div class="row">
-            <div class="col text-center">
-              <h4 class="mb-4">Subscribe to our Newsletter</h4>
-              <form class="d-flex justify-content-center">
-                <input type="email" class="form-control w-75" placeholder="Enter your email">
-                <button type="submit" class="btn custom-button ms-2">
-                  Subscribe
-                </button>
-              </form>
+          <!-- Map -->
+          <div class="col-md-6 text-center">
+            <h2 class="mb-4">Location</h2>
+            <div style="width: 100%">
+              <iframe
+                width="100%"
+                height="250"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                style="border-radius: 15px;"
+                src="https://maps.google.com/maps?width=720&amp;height=400&amp;hl=en&amp;q=1110%20Lockenvitz%20Ln,%20Bloomington,%20IL%2061704+(Simply%20Taxify)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                ><a href="https://www.gps.ie/">gps systems</a></iframe
+              >
             </div>
           </div>
         </div>
 
-        <!-- Map -->
-        <div class="col-md-6 text-center">
-          <h2 class="mb-4">Location</h2>
-          <div style="width: 100%"><iframe width="650" height="250" frameborder="0" scrolling="no" marginheight="0"
-              marginwidth="0"
-              src="https://maps.google.com/maps?width=720&amp;height=400&amp;hl=en&amp;q=1110%20Lockenvitz%20Ln,%20Bloomington,%20IL%2061704+(Simply%20Taxify)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
-                href="https://www.gps.ie/">gps systems</a></iframe></div>
+        <!-- Social Media Icons -->
+        <div class="row mt-5">
+          <div class="col text-center">
+            <a
+              href="https://www.facebook.com/SimplyTaxify"
+              target="_blank"
+              class="me-3"
+              ><i class="fab fa-facebook fa-2x"></i
+            ></a>
+            <a href="https://www.instagram.com/simply_taxify/" target="_blank"
+              ><i class="fab fa-instagram fa-2x"></i
+            ></a>
+          </div>
         </div>
       </div>
+    </footer>
 
-      <!-- Social Media Icons -->
-      <div class="row mt-5">
-        <div class="col text-center">
-          <a href="https://www.facebook.com/SimplyTaxify" target="_blank" class="me-3"><i
-              class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.instagram.com/simply_taxify/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <!-- Import JavaScript dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="static/js/index.js"></script>
 
-  <!-- Import JavaScript dependencies -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="static/js/index.js"></script>
-
-  <!-- Google Translate script -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        { pageLanguage: "en" },
-        "google_translate_element"
-      );
-    }
-  </script>
-  <script type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
+    <!-- Google Translate script -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
 </html>

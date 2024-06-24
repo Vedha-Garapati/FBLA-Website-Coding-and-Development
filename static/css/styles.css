@@ -157,3 +157,11 @@ section.home {
     background-color: #5fe798;
     color: #2b1055;
 }
+
+.custom-carousel-control-prev {
+    margin-left: -10%;   
+}
+
+.custom-carousel-control-next {
+    margin-right: -10%;
+}
