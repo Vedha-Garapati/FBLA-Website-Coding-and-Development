@@ -20,12 +20,7 @@ def preprocess_text(text):
     return ' '.join(filtered_tokens)
 
 def transform_similarity_score(score):
-    if score >= 0.6:
-        return 85 + int((score - 0.8) * 10)  # Scale the top scores around 85-90
-    elif score >= 0.35:
-        return 55 + int((score - 0.6) * 10)  # Scale mid scores around 55-60
-    else:
-        return 5 + int(score * 10)  # Scale low scores around 5-10
+    return round(score * 100, 2)
 
 def compute_similarity(years_experience, software_experience, certifications, availability, tax_knowledge, combined_job_description):
     applicant_processed = preprocess_text(f"Years of Tax Preparation Experience: {years_experience} Tax Software Experience: {software_experience} Tax Certifications: {certifications} Availability during Tax Season: {availability} Describe Your Tax Knowledge: {tax_knowledge}")
