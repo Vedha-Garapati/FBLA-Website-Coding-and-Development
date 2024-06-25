@@ -21,29 +21,17 @@ class Application(models.Model):
 
     zip=models.PositiveIntegerField(null=True, blank=True) 
     
-    certifications=models.CharField(max_length=200,null=True,blank=True)#Initializes data variable for the applicants certifications. Accepts maximum of 200 characters
+    certifications=models.TextField(max_length=200,null=True,blank=True)#Initializes data variable for the applicants certifications. Accepts maximum of 200 characters
 
     taxKnowledge=models.TextField(null=True, blank=True)
 
-    taxSoftware=models.CharField(max_length=200,null=True,blank=True)#Initializes data variable for the applicants tax software experience. Accepts maximum of 200 characters
+    taxSoftware=models.TextField(null=True,blank=True)#Initializes data variable for the applicants tax software experience. Accepts maximum of 200 characters
 
-    years=models.PositiveIntegerField(null=True,blank=True)#Initializes data variable for applicants years of experience.
+    years=models.TextField(null=True,blank=True)#Initializes data variable for applicants years of experience.
 
-    availability=models.CharField(max_length=200,null=True,blank=True)#Initializes data variable for the applicants availability during tax season input box. Accepts max 200 characters
+    availability=models.TextField(null=True,blank=True)#Initializes data variable for the applicants availability during tax season input box. Accepts max 200 characters
 
-    reference1Name=models.CharField(max_length=60, null=True, blank=True)
-
-    reference1Relationship=models.CharField(max_length=60, null=True, blank=True)
-
-    reference1Phone=models.CharField(max_length=10,null=True,blank=True)
-
-    reference2Name=models.CharField(max_length=60, null=True, blank=True)
-
-    reference2Relationship=models.CharField(max_length=60, null=True, blank=True)
-
-    reference2Phone=models.CharField(max_length=10,null=True,blank=True)
-
-    reasonForApplying=models.TextField(null=True,blank=True)
+    WhyTheyWantToJoin=models.TextField(null=True,blank=True)
 
     recentStartDate=models.DateField(null=True, blank=True)
 
@@ -57,13 +45,11 @@ class Application(models.Model):
 
     recentState=models.CharField(max_length=2, null=True, blank=True)
 
-    recentReasonForLeaving=models.CharField(max_length=350, null=True, blank=True)
-
     recentJobDescription=models.TextField(null=True, blank=True)
 
     extraInfo=models.TextField(null=True, blank=True)
 
-    overallScore=models.CharField(max_length=5,null=True,blank=True)
+    overallScore=models.TextField(null=True,blank=True)
 
 
 
