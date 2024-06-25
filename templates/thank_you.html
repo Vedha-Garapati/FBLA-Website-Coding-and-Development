@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!--Set up page and import all stylesheet dependecies -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Thank You for Applying</title>
+<head>
+  <!--Set up page and import all stylesheet dependencies -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="static/css/thank.css" />
-  </head>
-  <body>
-    <!--Thank you section-->
-    <div class="thank-you-container">
-      <h1 class="mb-4">Thank You for Applying!</h1>
-      <p class="mb-4">
-        We appreciate your interest. Our team will review your application, and
-        we'll get in touch with you soon.
-      </p>
-      <a href="\" class="btn-go-home">Go Home</a>
+  <title>Thank You for Applying</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="static/css/thank.css" />
+</head>
+
+<body>
+  <!--Thank you section-->
+  <div class="thank-you-container">
+    <h1 class="mb-4">Thank You for Applying!</h1>
+    <p class="mb-4">
+      We appreciate your interest. Our team will review your application, and
+      we'll get in touch with you soon. Book an interview below.
+    </p>
+    <a href="/" class="btn-go-home">Go Home</a>
+  </div>
+  <div id="calendar">
+    <div style="
+          position: relative;
+          padding-bottom: 56.25%;
+          height: 0;
+          overflow: hidden;
+          max-width: 100%;
+          background-color: white;
+          border: 1px solid #777;
+          border-radius: 15px;
+          margin: 20px auto;
+          max-width: 75%; 
+        ">
+      <iframe
+        src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ04oMH_t5RC-2BhBvK_JehupAAzbHKC5Jhy-edRFoBVPJhV7lbGlETOXphn_aC6SgyCbM2XlqIN"
+        style="
+            border: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75%;
+            border-radius: 15px;
+          " frameborder="0" scrolling="yes"></iframe>
     </div>
+  </div>
 
-    <!--Import javascript dependecies-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <!--Import javascript dependencies-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-  </body>
 </html>
