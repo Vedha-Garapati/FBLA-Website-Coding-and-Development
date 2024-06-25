@@ -5,7 +5,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import random
 
-# Download NLTK data
+# Download NLTK data for tokenization and stopwords
 nltk.download('punkt')
 nltk.download('stopwords')
 
@@ -14,11 +14,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Application
 
+# Function to preprocess text data
 def preprocess_text(text):
+    # Tokenize text into words and convert to lowercase
     tokens = word_tokenize(text.lower())
+    # Remove stopwords and non-alphabetic tokens
     filtered_tokens = [token for token in tokens if token.isalpha() and token not in stopwords.words('english')]
     return ' '.join(filtered_tokens)
 
+# Function to transform similarity score into a scaled score
 def transform_similarity_score(score):
     if score >= 0.6:
         return 85 + int((score - 0.8) * 10)  # Scale the top scores around 85-90
@@ -27,17 +31,22 @@ def transform_similarity_score(score):
     else:
         return 5 + int(score * 10)  # Scale low scores around 5-10
 
+# Function to compute similarity between applicant and job descriptions
 def compute_similarity(years_experience, software_experience, certifications, availability, tax_knowledge, combined_job_description):
+    # Preprocess applicant information and job description
     applicant_processed = preprocess_text(f"Years of Tax Preparation Experience: {years_experience} Tax Software Experience: {software_experience} Tax Certifications: {certifications} Availability during Tax Season: {availability} Describe Your Tax Knowledge: {tax_knowledge}")
     combined_job_description_processed = preprocess_text(combined_job_description)
+    # Create documents for TF-IDF vectorization
     documents = [applicant_processed, combined_job_description_processed]
+    # Initialize TF-IDF vectorizer and compute cosine similarity
     vectorizer = TfidfVectorizer()
     tfidf_matrix = vectorizer.fit_transform(documents)
     similarity_matrix = cosine_similarity(tfidf_matrix)
-    similarity_score = similarity_matrix[0, 1]
-    transformed_score = transform_similarity_score(similarity_score)
+    similarity_score = similarity_matrix[0, 1]  # Extract similarity score
+    transformed_score = transform_similarity_score(similarity_score)  # Transform similarity score
     return transformed_score
 
+# Function to collect applicant information from POST request
 def collect_applicant_info(years_experience, software_experience, certifications, availability, tax_knowledge):
     info = f"""
     Years of Tax Preparation Experience: {years_experience}
@@ -48,11 +57,14 @@ def collect_applicant_info(years_experience, software_experience, certifications
     """
     return info
 
+# Main view function for rendering index.html
 def main(request):
     return render(request,'index.html')
 
+# View function for handling POST request from index.html form
 def index(request):
     if request.method == "POST":
+        # Create new Application object and populate fields from POST data
         apply = Application()
         apply.firstName = request.POST.get('firstName')
         apply.lastName = request.POST.get('lastName')
@@ -77,6 +89,7 @@ def index(request):
         apply.WhyTheyWantToJoin = request.POST.get('recentReasonForLeaving')
         apply.recentJobDescription = request.POST.get('recentJobDescription')
         apply.extraInfo = request.POST.get('extraInfo')
+        apply.resume=request.POST.get('resume')
 
         # Collect applicant information
         years_experience = apply.years
@@ -120,21 +133,22 @@ def index(request):
         # Combine all job descriptions into one text
         combined_job_description = " ".join([job['text'] for job in job_descriptions])
 
-        # Compute similarity score
+        # Compute similarity score between applicant and job descriptions
         match_score = compute_similarity(years_experience, software_experience, certifications, availability, tax_knowledge, combined_job_description)
 
-        # Assign computed score to the overallScore field
+        # Assign computed score to the overallScore field of the Application object
         apply.overallScore = match_score
 
-        # Save the application data
+        # Save the application data to the database
         apply.save()
 
-        # If everything went well, redirect to the thank you page
+        # If successful, render the thank_you.html page
         return render(request, 'thank_you.html')
 
     # Render the index.html page if it's a GET request
     return render(request, 'index.html')
 
+# View functions for other pages (not directly relevant to the commented code)
 def application(request):
     return render(request, 'app.html')
 

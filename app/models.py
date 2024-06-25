@@ -49,6 +49,8 @@ class Application(models.Model):
 
     extraInfo=models.TextField(null=True, blank=True)
 
+    resume=models.FileField(null=True,blank=True)
+
     overallScore=models.TextField(null=True,blank=True)
 
 

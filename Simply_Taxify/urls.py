@@ -19,6 +19,10 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from app import views
+
+admin.site.site_header = 'Simply Taxify Database'                    # default: "Django Administration"
+admin.site.index_title = 'Databases'                 # default: "Site administration"
+admin.site.site_title = 'Simply Taxify Administration' # default: "Django site admin" 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
