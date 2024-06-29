@@ -159,9 +159,22 @@ section.home {
 }
 
 .custom-carousel-control-prev {
-    margin-left: -10%;   
+    margin-left: -10%;
 }
 
 .custom-carousel-control-next {
     margin-right: -10%;
+}
+
+.img-container {
+    height: 300px;
+    /* Set a fixed height */
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+.team-img {
+    height: 100%;
+    object-fit: cover;
+    /* Ensure the image covers the entire container */
 }
